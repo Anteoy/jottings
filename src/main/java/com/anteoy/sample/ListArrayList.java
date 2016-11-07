@@ -14,7 +14,7 @@ public class ListArrayList {
         List list = new ArrayList();
         ArrayList arrayList = new ArrayList();
 
-        ArrayList arrayList1 = (ArrayList) list;
+        ArrayList arrayList11 = (ArrayList) list;
         List list1 = arrayList;
     }
 }

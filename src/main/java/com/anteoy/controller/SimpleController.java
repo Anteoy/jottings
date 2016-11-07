@@ -1,7 +1,10 @@
 package com.anteoy.controller;
 
+import com.anteoy.annotation.FormModel;
+import com.anteoy.entity.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Created by zhoudazhuang
@@ -11,9 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class SimpleController {
-    @RequestMapping
-    public String simple(){
+    @RequestMapping("simple")
+    public ModelAndView simple(@FormModel("p")Person p ){
+        ModelAndView tmpMAV = new ModelAndView("index");
         String oo = "";
-        return "simple";
+        System.out.println(p);
+        tmpMAV.addObject("p.name",p.getName());
+        return tmpMAV;
     }
 }

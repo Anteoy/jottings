@@ -24,7 +24,8 @@
 		<property name="locations">
 			<list>
 				<value>classpath:jdbc.properties</value>
-				<value>classpath:conf.properties</value>
+				<!--<value>classpath:conf.properties</value>-->
+				<value>classpath:log4j.properties</value>
 				<value>classpath:redis.properties</value>
 				<value>classpath:oss.properties</value>
 			</list>
@@ -99,6 +100,15 @@
 			<list>
 				<value>application/json;charset=UTF-8</value>
 				<value>text/html;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<property name="synchronizeOnSession" value="true"></property>
+		<property name="customArgumentResolvers">
+			<list>
+				<bean class="com.anteoy.plugins.MethodArgumentsResolver"></bean>
 			</list>
 		</property>
 	</bean>

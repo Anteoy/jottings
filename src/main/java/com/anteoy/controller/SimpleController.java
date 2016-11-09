@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * Created by zhoudazhuang
  * Date: 16-11-7
@@ -22,5 +24,17 @@ public class SimpleController {
         System.out.println(p);
         tmpMAV.addObject("p.name",p.getName());
         return tmpMAV;
+    }
+
+
+    @RequestMapping("/index")
+    public ModelAndView index(HttpServletRequest request) {
+        String oo = request.getParameter("oo");
+        if (oo.equals("oo")) {
+            throw new RuntimeException("error in index");
+            //return new ModelAndView("redirect:/" + index);
+        }
+        return null;
+        //return new ModelAndView(index);
     }
 }

@@ -24,6 +24,11 @@
 			<bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter"/>
 		</mvc:message-converters>
 	</mvc:annotation-driven>
+	<!-- Scans for annotated @Controllers in the classpath -->
+	<context:component-scan base-package="com.anteoy" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+	</context:component-scan>
 	<!-- 加载配置项 -->
 	<bean id="config"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">

@@ -1,5 +1,7 @@
 package com.anteoy.sample;
 
+import com.alibaba.fastjson.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,5 +19,14 @@ public class ListArrayList {
 
         ArrayList arrayList11 = (ArrayList) list;
         List list1 = arrayList;
+
+        try{
+            throw new RuntimeException("test!!!!");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        System.out.println("continue!!!!");
+        Object o = JSONObject.parse("dsfdfsd");
+
     }
 }

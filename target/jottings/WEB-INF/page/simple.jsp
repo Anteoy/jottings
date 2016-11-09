@@ -12,5 +12,9 @@
 </head>
 <body>
     oooooo
+<script>
+    var a = 2;
+    if(1<a<3){}
+</script>
 </body>
 </html>

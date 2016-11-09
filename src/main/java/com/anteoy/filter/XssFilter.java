@@ -22,7 +22,7 @@ public class XssFilter implements Filter {
           
             XssHttpServletRequestWrapper xssRequest = new XssHttpServletRequestWrapper(  
             (HttpServletRequest) request);  
-            filterChain.doFilter(xssRequest, response);  
+//            filterChain.doFilter(xssRequest, response);
     }
 
 	@Override

@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.rabbitmq:amqp-client:3.3.5">
     <CLASSES>
-      <root url="jar:///home/zhoudazhuang/repository/com/rabbitmq/amqp-client/3.3.5/amqp-client-3.3.5.jar!/" />
+      <root url="jar:///home/zhoudazhuang/maven-repo/com/rabbitmq/amqp-client/3.3.5/amqp-client-3.3.5.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar:///home/zhoudazhuang/repository/com/rabbitmq/amqp-client/3.3.5/amqp-client-3.3.5-javadoc.jar!/" />
+      <root url="jar:///home/zhoudazhuang/maven-repo/com/rabbitmq/amqp-client/3.3.5/amqp-client-3.3.5-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar:///home/zhoudazhuang/repository/com/rabbitmq/amqp-client/3.3.5/amqp-client-3.3.5-sources.jar!/" />
+      <root url="jar:///home/zhoudazhuang/maven-repo/com/rabbitmq/amqp-client/3.3.5/amqp-client-3.3.5-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

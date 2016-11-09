@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class SimpleController {
     @RequestMapping("simple")
     public ModelAndView simple(@FormModel("p")Person p ){
+        System.out.println(p.getName());
         ModelAndView tmpMAV = new ModelAndView("index");
         String oo = "";
         System.out.println(p);

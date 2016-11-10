@@ -4,6 +4,7 @@ import com.anteoy.annotation.FormModel;
 import com.anteoy.entity.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -36,5 +37,13 @@ public class SimpleController {
         }
         return null;
         //return new ModelAndView(index);
+    }
+
+    @ResponseBody
+    @RequestMapping( value = "/indexJson",produces = "application/json")
+    public Person indexJson(HttpServletRequest request) {
+        Person person = new Person();
+        person.setName("dsf");
+        return person;
     }
 }

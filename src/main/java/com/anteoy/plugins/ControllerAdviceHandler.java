@@ -29,6 +29,19 @@ public class ControllerAdviceHandler {
         Map<String, Object> hello = new HashMap<>(2);
         hello.put("hello", "helllo msg");
         hello.put("msg", e.getMessage());
+        String a ="日本人";
+        org.slf4j.Marker marker;
+        log.error("error in url:{}, reason: {}", request.getRequestURI().toString(), e);
+        return hello;
+    }
+
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ExceptionHandler(value = RuntimeException.class)
+    @ResponseBody
+    public Object runtimeExceptionHandler(HttpServletRequest request, HttpServletResponse response, Exception e) {
+        Map<String, Object> hello = new HashMap<>(2);
+        hello.put("errMsg", "runtimeexception");
+        hello.put("msg", e.getMessage());
         log.error("error in url:{}, reason: {}", request.getRequestURI().toString(), e);
         return hello;
     }

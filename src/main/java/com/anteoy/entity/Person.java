@@ -7,6 +7,8 @@ package com.anteoy.entity;
  * Description :
  */
 public class Person {
+    static  int a;
+    final int b = 2;
     private String name;
 
     public String getName() {

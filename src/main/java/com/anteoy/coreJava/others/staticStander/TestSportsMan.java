@@ -35,6 +35,7 @@ class SportsMan {
     String name;
     int age;
     static String nation;
+    public static final int a = 2;
 
     public SportsMan(String name, int age) {
         super();

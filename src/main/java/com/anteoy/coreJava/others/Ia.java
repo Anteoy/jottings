@@ -7,6 +7,7 @@ package com.anteoy.coreJava.others;
  * Description :
  */
 public interface Ia {
-    public static int a = 2;
+    public static final int a = 2;
+    int b = 3;
 
 }

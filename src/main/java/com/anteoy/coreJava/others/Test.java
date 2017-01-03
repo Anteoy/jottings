@@ -8,4 +8,5 @@ package com.anteoy.coreJava.others;
  */
 public interface Test {
     static String oo = "a";
+
 }

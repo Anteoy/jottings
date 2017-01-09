@@ -8,6 +8,8 @@ package com.anteoy.coreJava.others;
  */
 public class OoTest implements Ia,Ib{
 
+    public int c = 0;
+
     {
         String sex = "ada";
     }

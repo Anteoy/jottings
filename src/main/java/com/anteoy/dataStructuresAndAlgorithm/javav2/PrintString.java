@@ -1,7 +1,5 @@
 package com.anteoy.dataStructuresAndAlgorithm.javav2;
 
-import static jdk.nashorn.internal.objects.Global.print;
-
 /**
  * Created by zhoudazhuang on 17-2-16.
  * Description:
@@ -18,13 +16,17 @@ public class PrintString {
      * @param n 这里系统标准输出流每次都只打印一个字符
      */
     private static void printStrs(int n) {
+        //递归临界条件
         if(n>=10){
+            //前递归顺序执行
             printStrs(n/10);
         }
+        //后递归执行（反前递归顺序）
         System.out.println(n%10);
     }
 
     private static void printByte(int n){
+        //转为String
         String s = String.valueOf(n);
         byte[] bytes = s.getBytes();
         for (byte b: bytes) {
@@ -33,9 +35,12 @@ public class PrintString {
     }
 
     private static void printString(int n){
+        //转为String
         String s = String.valueOf(n);
+        //转为char[]
         char[] chars = new char[s.length()];
         s.getChars(0,s.length(),chars,0);
+        //for each输出
         for (char b: chars) {
             System.out.println(String.valueOf(b));
         }

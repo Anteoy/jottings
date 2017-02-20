@@ -33,7 +33,7 @@ public class PrintString {
             System.out.println(String.valueOf(b));
         }
     }
-
+    //add private只能在类内部使用（如new 其他都不行）
     private static void printString(int n){
         //转为String
         String s = String.valueOf(n);

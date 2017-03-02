@@ -7,5 +7,19 @@ import java.util.ArrayList;
  * Description:
  */
 public class ListGo {
-    ArrayList arrayList = new ArrayList();
+
+    public static void main(String[] args) {
+        ArrayList arrayList = new ArrayList();
+        arrayList.add(1);
+        arrayList.add(2);
+        arrayList.add(3);
+
+        //进栈
+        arrayList.add(arrayList.size(),2);
+
+        //出栈
+        arrayList.remove(arrayList.size()-1);
+
+        System.out.println(arrayList);
+    }
 }

@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 /**
  * Created by zhoudazhuang on 17-3-2.
- * Description:
+ * Description: 将LinkedList当作 LIFO(后进先出)的堆栈
  */
 public class StackByLinkedList {
 

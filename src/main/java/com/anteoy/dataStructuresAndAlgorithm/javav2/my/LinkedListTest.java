@@ -2,7 +2,7 @@ package com.anteoy.dataStructuresAndAlgorithm.javav2.my;
 
 /**
  * Created by zhoudazhuang on 17-3-1.
- * Description:
+ * Description: linkedlist 实现 栈和队列
  */
 import java.util.LinkedList;
 

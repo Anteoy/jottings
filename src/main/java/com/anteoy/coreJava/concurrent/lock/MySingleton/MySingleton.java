@@ -24,7 +24,7 @@ public class MySingleton implements Serializable {
     private MySingleton(){}
 
     /*synchronized*/ public static MySingleton getInstance() throws InterruptedException {//2. 对该方法进行synchronized的锁同步
-        //3. 从执行结果上来看，问题已经解决了，但是这种实现方式的运行效率会很低。同步方法效率低， 上下放都可以解决
+        //3. 从执行结果上来看，问te题已经解决了，但是这种实现方式的运行效率会很低。同步方法效率低， 上下放都可以解决
         //3. 这里的实现能够保证多线程并发下的线程安全性，但是这样的实现将全部的代码都被锁上了，同样的效率很低下。
 //        synchronized (MySingleton.class) {
             if(instance == null){//懒汉式

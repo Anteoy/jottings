@@ -5,6 +5,7 @@ import java.io.Serializable;
 
 /**
  * Created by root on 17-3-19.
+ *
  */
 //public class MySingleton {
 //

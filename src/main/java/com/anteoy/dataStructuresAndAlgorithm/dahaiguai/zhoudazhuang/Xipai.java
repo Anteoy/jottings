@@ -30,5 +30,8 @@ public class Xipai {
         for (int test: ints){
             System.out.println(test);
         }
+
+        int a = 3;
+        System.out.println("test: "+ a);
     }
 }

@@ -1,8 +1,6 @@
 package com.anteoy.lambda;
 
-import java.io.File;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -29,7 +27,7 @@ public class Example1 {
      */
     public static void main(String[] args) {
 
-        Arrays.sort(files, Comparator.comparing(File::getName));
+//???        Arrays.sort(files, Comparator.comparing(File::getName));
 
         String[] atp = {"Rafael Nadal", "Novak Djokovic", "Stanislas Wawrinka", "David Ferrer", "Roger Federer", "Andy Murray", "Tomas Berdych", "Juan Martin Del Potro", "Richard Gasquet", "John Isner"};
         List<String> players =  Arrays.asList(atp);

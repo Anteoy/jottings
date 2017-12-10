@@ -4,7 +4,7 @@ package com.anteoy.decisiveBattle.created.prototype;
  * Created by zhoudazhuang on 17-12-10.
  */
 public abstract class Shape implements Cloneable{
-    public String id;
+    private String id;
     public String type;
 
     abstract void draw();

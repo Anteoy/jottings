@@ -14,6 +14,7 @@ public class Test {
         for (int i = 0; i < array.length; i++) {
             for (int j = i; j < array.length; j++) {
                 int curSum = 0;
+                // 这是非常人思维的穷举 包含很多相同子序列的加法
                 for (int k = i; k <= j; k++) {
                     curSum += array[k];
                     if (curSum > maxSubSum) {
@@ -30,6 +31,7 @@ public class Test {
         for (int i = 0; i < array.length; i++) {
             //tmp 变量在上面for循环每次必须重新初始化
             int tmpSum = 0;
+            //常规思维方法 不会有重复的子序列
             for (int j = i; j < array.length; j++) {
                 //maxSubSum1中k到j是前面加到后面求和，而这里是以i为指针基点，往后求和
                 tmpSum += array[j];
@@ -42,7 +44,7 @@ public class Test {
     }
 
     /**
-     * 递归分治算法
+     * 递归分治算法(nlog2n)
      * @param array
      * @return
      */
@@ -92,6 +94,7 @@ public class Test {
             curTmpSum += array[i];
             if(curTmpSum > maxSubSum){
                 maxSubSum = curTmpSum;
+            //注：要求如果所有值都为负，则最大子序列和为0
             }else if(curTmpSum < 0){
                 curTmpSum = 0;
             }
@@ -101,7 +104,7 @@ public class Test {
 
     public static void main(String[] args) {
         //计算耗时，需要提供一个较大的数组，否则看不出差距 或者使用 System.nanoTime()毫微秒
-        int[] array = {-2,4,-1,5,6};
+        int[] array = {-2,4,-1,5,6,7};
         Long time1 = System.nanoTime();
         int maxSubSum1 = maxSubSum1(array);
         System.out.println("maxSubSum1计算结果： " + maxSubSum1 + "\n" + "耗时" + (System.nanoTime() - time1));

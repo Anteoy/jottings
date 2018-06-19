@@ -11,6 +11,11 @@ public class FinnalExtends {
 //        public static final int a = 2;
     }
 
+    static abstract class  test {
+        //can not static
+        public abstract void a();
+    }
+
     public static void main(String[] args) {
         FinnalExtends finnalExtends = new sub();
         System.out.println(finnalExtends.a);

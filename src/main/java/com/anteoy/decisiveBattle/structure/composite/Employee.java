@@ -21,15 +21,15 @@ public class Employee {
         this.subEmployees = new ArrayList<>();
     }
 
-    public void add(Employee employee){
+    public void add(Employee employee) {
         subEmployees.add(employee);
     }
 
-    public void remove(Employee employee){
+    public void remove(Employee employee) {
         subEmployees.remove(employee);
     }
 
-    public List<Employee> getSubEmployees(){
+    public List<Employee> getSubEmployees() {
         return subEmployees;
     }
 

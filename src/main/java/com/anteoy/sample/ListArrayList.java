@@ -20,9 +20,9 @@ public class ListArrayList {
         ArrayList arrayList11 = (ArrayList) list;
         List list1 = arrayList;
 
-        try{
+        try {
             throw new RuntimeException("test!!!!");
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         System.out.println("continue!!!!");

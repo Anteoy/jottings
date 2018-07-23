@@ -10,7 +10,7 @@ package com.anteoy.dataStructuresAndAlgorithm.dahaiguai.zhangweiquan;
 public interface reverseList {
 
     public static void main(String[] args) {
-        List<Integer> root = ListUtils.getList(new int[]{1,2,3,4});
+        List<Integer> root = ListUtils.getList(new int[]{1, 2, 3, 4});
         List<Integer> list = reverseList(root);
         while (list != null) {
             System.out.println(list.getValue());
@@ -19,7 +19,7 @@ public interface reverseList {
     }
 
     public static List<Integer> reverseList(List<Integer> root) {
-        if (root == null ) {
+        if (root == null) {
             return null;
         }
         List<Integer> reversePre = null;//反转后的单链表

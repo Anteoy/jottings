@@ -8,8 +8,8 @@ package com.anteoy.coreJava.others.staticStander;
  */
 public class TestSportsMan {
     public static void main(String[] args) {
-        SportsMan sp1 = new SportsMan("刘翔",18);
-        SportsMan sp2 = new SportsMan("姚明",20);
+        SportsMan sp1 = new SportsMan("刘翔", 18);
+        SportsMan sp2 = new SportsMan("姚明", 20);
         System.out.println(sp1);//SportsMan [name=刘翔, age=18, nation=null]
         System.out.println(sp2);//SportsMan [name=姚明, age=20, nation=null]
 
@@ -20,11 +20,11 @@ public class TestSportsMan {
          *
          * 当其中一个对象对此类变量进行修改，会影响其他对象的类变量的一个调用。
          */
-        System.out.println("SportsMan.nation="+SportsMan.nation);//SportsMan.nation=null
+        System.out.println("SportsMan.nation=" + SportsMan.nation);//SportsMan.nation=null
         sp1.nation = "China";
-        System.out.println("SportsMan.nation="+SportsMan.nation);//SportsMan.nation=China
+        System.out.println("SportsMan.nation=" + SportsMan.nation);//SportsMan.nation=China
         SportsMan.nation = "PRC";
-        System.out.println("SportsMan.nation="+SportsMan.nation);//SportsMan.nation=PRC
+        System.out.println("SportsMan.nation=" + SportsMan.nation);//SportsMan.nation=PRC
 
         System.out.println(sp1);//SportsMan [name=刘翔, age=18, nation=PRC]
         System.out.println(sp2);//SportsMan [name=姚明, age=20, nation=PRC]
@@ -46,12 +46,15 @@ class SportsMan {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public int getAge() {
         return age;
     }
+
     public void setAge(int age) {
         this.age = age;
     }

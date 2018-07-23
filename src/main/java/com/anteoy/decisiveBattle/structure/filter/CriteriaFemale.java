@@ -7,7 +7,7 @@ import java.util.List;
  * Created by zhoudazhuang on 17-12-13.
  * 过滤标准 女性
  */
-public class CriteriaFemale implements Criteria{
+public class CriteriaFemale implements Criteria {
     @Override
     public List<Person> meetCriteria(List<Person> persons) {
         List<Person> persons1 = new ArrayList<>();

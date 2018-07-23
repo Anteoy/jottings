@@ -2,15 +2,16 @@ package com.anteoy.designPatterns.observePattern;
 
 /**
  * 测试类
+ *
  * @Author 周巖 on
  * @Date 2016/3/25.18:34
  */
 public class Client {
-    public static void main (String[] args){
+    public static void main(String[] args) {
         //创建目标
         ConcreteWeatherSubject weather = new ConcreteWeatherSubject();
         //创建观察者
-        ConcreteObserver  observerGirl = new ConcreteObserver();
+        ConcreteObserver observerGirl = new ConcreteObserver();
         observerGirl.setObserverName("女朋友");
         observerGirl.setRemindThing("是我们第一次约会，地点街新公园");
 

@@ -10,6 +10,6 @@ public class OctalObserver extends Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        System.out.println("OctalObserver update"+ arg);
+        System.out.println("OctalObserver update" + arg);
     }
 }

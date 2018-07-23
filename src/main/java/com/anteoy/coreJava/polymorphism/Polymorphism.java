@@ -14,16 +14,19 @@ public class Polymorphism {
     int yy(int a){
         return 1;
     }*/
-    String yy(int a,String b){
+    String yy(int a, String b) {
         return null;
     }
-    String yy(String b,int a){
+
+    String yy(String b, int a) {
         return null;
     }
-    int yy(int b,int c){
+
+    int yy(int b, int c) {
         return 1;
     }
-    int yy (int a,boolean b){
+
+    int yy(int a, boolean b) {
         return 1;
     }
 }

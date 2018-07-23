@@ -18,47 +18,48 @@ import java.util.Comparator;
  * <p>
  * ④、Comparable接口强制进行自然排序，而Comparator接口不强制进行自然排序，可以指定排序顺序
  */
+
+/**
+ * 具体的比较类（比较器），实现Comparator接口
+ *
+ * @author breeze
+ */
+public class ComparatorConsunInfo implements Comparator<ConsumInfoComparatorPOJO> {
     /**
-     * 具体的比较类（比较器），实现Comparator接口
-     * @author breeze
-     *
+     * 顺序（从小到大）：
+     * if(price < o.price){
+     * return -1;
+     * }
+     * if(price > o.price){
+     * return 1;
+     * }
+     * 倒序（从大到小）：
+     * if(price < o.price){
+     * return 1;
+     * }
+     * if(price > o.price){
+     * return -1;
+     * }
      */
-    public class ComparatorConsunInfo implements Comparator<ConsumInfoComparatorPOJO> {
-        /**
-         * 顺序（从小到大）：
-         * if(price < o.price){
-         return -1;
-         }
-         if(price > o.price){
-         return 1;
-         }
-         * 倒序（从大到小）：
-         * if(price < o.price){
-         return 1;
-         }
-         if(price > o.price){
-         return -1;
-         }
-         */
-        @Override
-        public int compare(ConsumInfoComparatorPOJO o1, ConsumInfoComparatorPOJO o2) {
-            //首先比较price，如果price相同，则比较uid
-            if(o1.getPrice() > o2.getPrice()){
+    @Override
+    public int compare(ConsumInfoComparatorPOJO o1, ConsumInfoComparatorPOJO o2) {
+        //首先比较price，如果price相同，则比较uid
+        if (o1.getPrice() > o2.getPrice()) {
+            return 1;
+        }
+
+        if (o1.getPrice() < o2.getPrice()) {
+            return -1;
+        }
+
+        if (o1.getPrice() == o2.getPrice()) {
+            if (o1.getUid() > o2.getUid()) {
                 return 1;
             }
-
-            if(o1.getPrice() < o2.getPrice()){
+            if (o1.getUid() < o2.getUid()) {
                 return -1;
             }
-
-            if(o1.getPrice() == o2.getPrice()){
-                if(o1.getUid() > o2.getUid()){
-                    return 1;
-                }
-                if(o1.getUid() < o2.getUid()){
-                    return -1;
-                }
-            }
-            return 0;
         }
+        return 0;
+    }
 }

@@ -7,10 +7,11 @@ package com.anteoy.coreJava.constructor;
  * Description : 这个时候没有明写构造函数那就没有了 要用默认必须写出来 否则不存在
  */
 public class TestObj {
-    public TestObj(){
+    public TestObj() {
 
     }
-    public TestObj(String o,String oo ,String ooo){
+
+    public TestObj(String o, String oo, String ooo) {
 
     }
 }

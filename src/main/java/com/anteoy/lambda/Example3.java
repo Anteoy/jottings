@@ -8,13 +8,13 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toCollection;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
 
 /**
- *
  * @author Alin
  */
 public class Example3 {
@@ -157,7 +157,8 @@ public class Example3 {
                 .map(Person::getFirstName)
                 .collect(toSet());
 
-        javaDevFirstName.stream().forEach((s) -> System.out.printf("%s ", s));;
+        javaDevFirstName.stream().forEach((s) -> System.out.printf("%s ", s));
+        ;
 
         System.out.println("\nGet Java programmers last name to TreeSet:");
         TreeSet<String> javaDevLastName = javaProgrammers

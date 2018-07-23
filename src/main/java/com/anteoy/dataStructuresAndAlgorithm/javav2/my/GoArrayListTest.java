@@ -11,8 +11,8 @@ public class GoArrayListTest {
         goArrayList.add(2);
         goArrayList.add(3);
         //把数4的位置放在数3的位置上
-        goArrayList.add(2,4);
-        for (Integer goArrayList1:goArrayList){
+        goArrayList.add(2, 4);
+        for (Integer goArrayList1 : goArrayList) {
             System.out.println(goArrayList1);
         }
     }

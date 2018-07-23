@@ -13,21 +13,22 @@ public class DateUtils {
         Date starttime = getMonthByNow(-1);//获取上个月6号 2016-12-06 00:00:00
         Date thisdate = getMonthByNow(0); //获取当前月6号  2016-1-06 00:00:00
         Date deadline = getMonthByNow(+1);//获取下一个6号  2016-2-06 00:00:00
-        Boolean b1 = isBetweenDate(starttime,thisdate);
-        Boolean b2 = isBetweenDate(thisdate,deadline);
+        Boolean b1 = isBetweenDate(starttime, thisdate);
+        Boolean b2 = isBetweenDate(thisdate, deadline);
         System.out.println(b1);
         System.out.println(b2);
     }
 
     /**
      * 对比当前时间是否在指定区间内
-     * @param starttime  starttime < now time < deadline
+     *
+     * @param starttime starttime < now time < deadline
      * @param deadline
      * @return
      */
-    public static boolean isBetweenDate(Date starttime,Date deadline){
+    public static boolean isBetweenDate(Date starttime, Date deadline) {
         Date date = new Date();//需要修改这里为mongo拿出的芝麻数据存入时间
-        if(date.after(starttime) && date.before(deadline)){
+        if (date.after(starttime) && date.before(deadline)) {
             return true;
         }
         return false;
@@ -36,6 +37,7 @@ public class DateUtils {
     /**
      * 获取任意时间的上一个月
      * 描述:<描述函数实现的功能>.
+     *
      * @param repeatDate
      * @return
      */
@@ -49,7 +51,7 @@ public class DateUtils {
         c.add(Calendar.MONTH, -1);
         Date mb = c.getTime();
         String mon = simpleDateFormatMM.format(mb);
-        System.out.println("过去一个月："+mon);
+        System.out.println("过去一个月：" + mon);
 
         c.setTime(new Date());
         c.add(Calendar.MONTH, +1);
@@ -66,10 +68,11 @@ public class DateUtils {
 
     /**
      * 获取指定月的6号
+     *
      * @param month -1 从当前月减一月 +1 从当前月加一月
      * @return
      */
-    public static Date getMonthByNow(int month){
+    public static Date getMonthByNow(int month) {
         SimpleDateFormat simpleDateFormatMM = new SimpleDateFormat("yyyy-MM");
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Calendar c = Calendar.getInstance();

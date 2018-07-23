@@ -8,7 +8,7 @@ public class TestMain {
         ShapeCache shapeCache = new ShapeCache();
         shapeCache.initData();
         Shape shape = ShapeCache.getShape("1");
-        System.out.println(shape.getId()+":");
+        System.out.println(shape.getId() + ":");
         shape.draw();
     }
 }

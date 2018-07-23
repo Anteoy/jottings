@@ -7,7 +7,7 @@ package com.anteoy.dataStructuresAndAlgorithm.dahaiguai.zhangweiquan;
  * Time: 上午10:05
  * Description : 单向链表 Node 类
  */
-public class List <T>{
+public class List<T> {
 
     // 指向像一个list的指针 这里直接包含下一个
     private List<T> next;
@@ -57,7 +57,7 @@ public class List <T>{
         //最后一个node的hash计算
         if (this.next == null) {
             return this.value.hashCode();
-        }else {
+        } else {
             //除最后一个node的hash计算方法为两者hash值之和
             return this.next.hashCode() + this.value.hashCode();
         }
@@ -76,16 +76,13 @@ public class List <T>{
     }
 
     public boolean equals(List obj) {
-        if ((this.next == null && obj.next == null && this.value == obj.value) || this.hashCode() == obj.hashCode() ) {
+        if ((this.next == null && obj.next == null && this.value == obj.value) || this.hashCode() == obj.hashCode()) {
             return true;
-        }else {
+        } else {
             return false;
         }
 
     }
-
-
-
 
 
 }

@@ -1,13 +1,14 @@
 package com.anteoy.designPatterns.factory;
+
 /**
  * ���ͽӿ�
- * @author Administrator
  *
+ * @author Administrator
  */
 public interface HairInterface {
 
-	/**
-	 * ��ͼ
-	 */
-	public void draw();
+    /**
+     * ��ͼ
+     */
+    public void draw();
 }

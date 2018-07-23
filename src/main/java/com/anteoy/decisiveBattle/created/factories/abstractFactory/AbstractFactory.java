@@ -5,5 +5,6 @@ package com.anteoy.decisiveBattle.created.factories.abstractFactory;
  */
 public interface AbstractFactory {
     Shape getShape(int flag);
+
     Color getColor(int flag);
 }

@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by zhoudazhuang on 17-12-13.
  */
-public class OrCriteria implements Criteria{
+public class OrCriteria implements Criteria {
 
     public Criteria criteria;
 
@@ -22,7 +22,7 @@ public class OrCriteria implements Criteria{
         List<Person> otherCriteriaItems = otherCriteria.meetCriteria(persons);
 
         for (Person person : otherCriteriaItems) {
-            if(!firstCriteriaItems.contains(person)){
+            if (!firstCriteriaItems.contains(person)) {
                 firstCriteriaItems.add(person);
             }
         }

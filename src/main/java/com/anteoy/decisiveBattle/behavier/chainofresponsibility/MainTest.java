@@ -9,7 +9,7 @@ package com.anteoy.decisiveBattle.behavier.chainofresponsibility;
 public class MainTest {
     public static void main(String[] args) {
         AbstractLogger consoleLogger = new ConsoleLogger();
-        consoleLogger.logMsg(4,"test1111");
+        consoleLogger.logMsg(4, "test1111");
 
     }
 }

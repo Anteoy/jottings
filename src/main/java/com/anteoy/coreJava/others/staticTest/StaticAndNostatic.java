@@ -12,7 +12,7 @@ public class StaticAndNostatic {
     static int age;// 声明静态变量age
 
     // 构造方法，手动声明构造方法之后，不论声明的是有参还是无参的构造方法，系统都不会再自动生成无参的构造方法
-    public StaticAndNostatic () {
+    public StaticAndNostatic() {
         System.out.println("通过构造方法初始化name");
         name = "tom";
     }
@@ -24,7 +24,7 @@ public class StaticAndNostatic {
     }
 
     // 静态初始化块，只在类加载的时候初始化一次，且只能初始化静态成员变量，不能初始化普通变量
-    static  {
+    static {
         System.out.println("通过静态初始化块初始化age");
         age = 20;
     }

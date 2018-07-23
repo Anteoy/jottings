@@ -2,6 +2,7 @@ package com.anteoy.designPatterns.observePattern;
 
 /**
  * 具体的目标对象，负责把有关状态存入到相应的观察者对象中
+ *
  * @Author 周巖 on
  * @Date 2016/3/25.17:52
  */

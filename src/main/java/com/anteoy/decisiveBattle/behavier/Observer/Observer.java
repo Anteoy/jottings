@@ -5,5 +5,6 @@ package com.anteoy.decisiveBattle.behavier.Observer;
  */
 public abstract class Observer {
     public Subject subject;
+
     public abstract void update();
 }

@@ -6,12 +6,14 @@ package com.anteoy.sample.ComparableComparator;
  * Time: 上午10:04
  * Description :
  */
+
 import java.util.Date;
+
 /**
  * 因为要实现对ConsumInfo对象的排序，所以在ConsunInfo类中要实现Comparable接口，也就是要实现compareTo()方法
  * 具体的比较参照：依次按照price、uid进行倒序排序
- * @author breeze
  *
+ * @author breeze
  */
 public class ConsumInfoComparablePOJO implements Comparable<ConsumInfoComparablePOJO> {
     private int uid;
@@ -23,7 +25,7 @@ public class ConsumInfoComparablePOJO implements Comparable<ConsumInfoComparable
         // TODO Auto-generated constructor stub
     }
 
-    public ConsumInfoComparablePOJO(int uid, String name, double price, Date datetime){
+    public ConsumInfoComparablePOJO(int uid, String name, double price, Date datetime) {
         this.uid = uid;
         this.name = name;
         this.price = price;
@@ -69,39 +71,39 @@ public class ConsumInfoComparablePOJO implements Comparable<ConsumInfoComparable
         return "ConsumInfo [uid=" + uid + ", name=" + name + ", price=" + price
                 + ", datetime=" + datetime + "]";
     }
+
     /**
      * 这里比较的是什么, Collections.sort方法实现的就是按照此比较的东西排列
      * 顺序（从小到大）：
      * if(price < o.price){
-     return -1;
-     }
-     if(price > o.price){
-     return 1;
-     }
+     * return -1;
+     * }
+     * if(price > o.price){
+     * return 1;
+     * }
      * 倒序（从大到小）：
      * if(price < o.price){
-     return 1;
-     }
-     if(price > o.price){
-     return -1;
-     }
-     *
+     * return 1;
+     * }
+     * if(price > o.price){
+     * return -1;
+     * }
      */
     @Override
     public int compareTo(ConsumInfoComparablePOJO o) {
         //首先比较price，如果price相同，则比较uid
-        if(price < o.price){
+        if (price < o.price) {
             return -1;
         }
-        if(price > o.price){
+        if (price > o.price) {
             return 1;
         }
 
-        if(price == o.price){
-            if(uid < o.uid){
+        if (price == o.price) {
+            if (uid < o.uid) {
                 return -1;
             }
-            if(uid > o.uid){
+            if (uid > o.uid) {
                 return 1;
             }
         }

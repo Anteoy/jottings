@@ -11,13 +11,12 @@ public abstract class AbstractLogger {
     public AbstractLogger nextLogger;
 
 
-
     public void setNextLogger(AbstractLogger nextLogger) {
         this.nextLogger = nextLogger;
     }
 
-    public abstract void logMsg(int level,String msg);
+    public abstract void logMsg(int level, String msg);
 
-    public abstract void write(int level,String msg);
+    public abstract void write(int level, String msg);
 
 }

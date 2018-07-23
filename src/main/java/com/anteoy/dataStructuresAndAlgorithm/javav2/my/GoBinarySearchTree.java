@@ -13,6 +13,7 @@ public class GoBinarySearchTree<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * 节点存储tuple
+     *
      * @param <AnyType>
      */
     private static class BinaryNode<AnyType> {
@@ -59,8 +60,7 @@ public class GoBinarySearchTree<AnyType extends Comparable<? super AnyType>> {
     /**
      * 该树是否存在含有参数值的节点
      *
-     * @param value
-     *            元素值
+     * @param value 元素值
      * @return 是否含该元素
      */
     public boolean contains(AnyType value) {
@@ -69,6 +69,7 @@ public class GoBinarySearchTree<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * node节点及其子节点是否有value这个值
+     *
      * @param value
      * @param node
      * @return
@@ -94,6 +95,7 @@ public class GoBinarySearchTree<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * 查找树的最小元素值
+     *
      * @return 最小元素值
      */
     public AnyType findMin() {
@@ -107,6 +109,7 @@ public class GoBinarySearchTree<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * 查找以node为树的最小子节点
+     *
      * @param node root节点
      * @return 最小子节点
      */
@@ -123,6 +126,7 @@ public class GoBinarySearchTree<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * 查找该树最大元素值
+     *
      * @return 最大元素值
      */
     public AnyType findMax() {
@@ -133,15 +137,15 @@ public class GoBinarySearchTree<AnyType extends Comparable<? super AnyType>> {
     }
 
 
-
     /**
      * 查找某节点及其子树中的最大元素 这里使用while循环替代递归 递归方法在下面注解中给出
+     *
      * @param root
      * @return
      */
     private BinaryNode<AnyType> findMavalue(BinaryNode<AnyType> root) {
-        if(root != null){
-            while (root.right != null){
+        if (root != null) {
+            while (root.right != null) {
                 root = root.right;
             }
         }
@@ -160,6 +164,7 @@ public class GoBinarySearchTree<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * 插入元素
+     *
      * @param value
      */
     public void insert(AnyType value) {
@@ -168,6 +173,7 @@ public class GoBinarySearchTree<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * root node下插入元素value
+     *
      * @param value
      * @param root
      * @return 元素插入的节点
@@ -191,6 +197,7 @@ public class GoBinarySearchTree<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * 删除某元素
+     *
      * @param value
      */
     public void remove(AnyType value) {
@@ -199,6 +206,7 @@ public class GoBinarySearchTree<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * 在某个节点下删除元素
+     *
      * @param value
      * @param root
      * @return 被删除元素的节点
@@ -243,6 +251,7 @@ public class GoBinarySearchTree<AnyType extends Comparable<? super AnyType>> {
      * 递归输出打印
      * 先输出最小的左子节点 在在每一个递归回归里面 进行递归右边节点的操作
      * 达到由小到大输出
+     *
      * @param root
      */
     private void printTree(BinaryNode<AnyType> root) {

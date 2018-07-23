@@ -3,14 +3,13 @@ package com.anteoy.filter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 
-/** 
- * @author 作者姓名 zhilun liu  E-mail: email地址 
- * @version 创建时间：2016年5月26日 下午3:48:55 
- * 类说明 
+/**
+ * @author 作者姓名 zhilun liu  E-mail: email地址
+ * @version 创建时间：2016年5月26日 下午3:48:55
+ * 类说明
  */
 
-public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {  
-
+public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
 
 
     public XssHttpServletRequestWrapper(HttpServletRequest request) {
@@ -21,7 +20,7 @@ public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
     public String[] getParameterValues(String name) {
 
         String[] values = super.getParameterValues(name);
-        if (values==null)  {
+        if (values == null) {
             return null;
         }
         int count = values.length;
@@ -66,5 +65,5 @@ public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
         }
         return value;
     }
- 
+
 } 

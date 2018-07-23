@@ -2,14 +2,14 @@ package com.anteoy.designPatterns.proxy.dynamicProxy.cglib;
 
 public class Client {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
 
-		CglibProxy proxy = new CglibProxy();
-		Train t = (Train)proxy.getProxy(Train.class);
-		t.move();
-	}
+        CglibProxy proxy = new CglibProxy();
+        Train t = (Train) proxy.getProxy(Train.class);
+        t.move();
+    }
 
 }

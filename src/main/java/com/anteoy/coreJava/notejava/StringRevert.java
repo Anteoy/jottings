@@ -18,9 +18,9 @@ public class StringRevert {
             String left = s.substring(0, length / 2);
             String right = s.substring(length / 2, length);
             System.out.println("==============");
-            System.out.println("string is :"+ s);
-            System.out.println("left:" +left);
-            System.out.println("right:"+right);
+            System.out.println("string is :" + s);
+            System.out.println("left:" + left);
+            System.out.println("right:" + right);
             // 这里如果这样递归打印 是有问题的
             // System.out.println("left + right :" +reverse1(right) + reverse1(left));
             return reverse(right) + reverse(left);

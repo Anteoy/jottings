@@ -43,7 +43,8 @@ public class GoBinaryHeap<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * 堆内元素向下移动 下滤 可以用上滤来进行相反的理解
-     *删除后空余的位置 从上至下 从上至下找最小儿子节点填充
+     * 删除后空余的位置 从上至下 从上至下找最小儿子节点填充
+     *
      * @param hole 下移的开始下标
      */
     private void percolateDown(int hole) {
@@ -69,6 +70,7 @@ public class GoBinaryHeap<AnyType extends Comparable<? super AnyType>> {
      * 插入 （上滤）
      * 需要满足完全二叉树的堆序性质
      * 插入时 和子树的根节点比较 只有比子树根节点大才能满足定义 否则移植循环交换位置
+     *
      * @param x
      */
     public void insert(AnyType x) {
@@ -86,6 +88,7 @@ public class GoBinaryHeap<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * 堆是否满
+     *
      * @return 是否堆满
      */
     public boolean isFull() {
@@ -94,6 +97,7 @@ public class GoBinaryHeap<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * 堆是否空
+     *
      * @return 是否堆空
      */
     public boolean isEmpty() {
@@ -106,12 +110,13 @@ public class GoBinaryHeap<AnyType extends Comparable<? super AnyType>> {
     public void makeEmpay() {
         currentSize = 0;
         for (AnyType anyType : array) {
-            anyType=null;
+            anyType = null;
         }
     }
 
     /**
      * 找到堆中最小元素
+     *
      * @return 最小元素
      */
     public AnyType findMin() {
@@ -124,6 +129,7 @@ public class GoBinaryHeap<AnyType extends Comparable<? super AnyType>> {
      * 删除堆中最小元素
      * 根据完全二叉树（堆序性质） 最小的为root节点
      * 删除后空余的位置 从上至下 从上至下找最小儿子节点填充
+     *
      * @return 被删除元素
      */
     public AnyType deleteMin() {
@@ -139,6 +145,7 @@ public class GoBinaryHeap<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * 扩大数组容量
+     *
      * @param newSize 新的容量
      */
     private void enlargeArray(int newSize) {
@@ -155,7 +162,7 @@ public class GoBinaryHeap<AnyType extends Comparable<? super AnyType>> {
     public void printHeap() {
         for (AnyType anyType : array) {
             //不打印数组中的null
-            if(anyType == null){
+            if (anyType == null) {
                 continue;
             }
             System.out.print(anyType + " ");

@@ -3,7 +3,7 @@ package com.anteoy.decisiveBattle.structure.decorator;
 /**
  * Created by zhoudazhuang on 17-12-11.
  */
-public class RedShapDecorator extends ShapeDecorator{
+public class RedShapDecorator extends ShapeDecorator {
     public Shape shape;
 
     RedShapDecorator(Shape shape) {
@@ -17,7 +17,7 @@ public class RedShapDecorator extends ShapeDecorator{
     }
 
     //border 边缘 边境
-    public void setRedBorder(){
+    public void setRedBorder() {
         System.out.println("红色装饰器装饰了Shape");
     }
 }

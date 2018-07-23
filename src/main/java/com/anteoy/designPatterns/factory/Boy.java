@@ -1,11 +1,12 @@
 package com.anteoy.designPatterns.factory;
+
 /**
  * �к�
- * @author Administrator
  *
+ * @author Administrator
  */
 public interface Boy {
 
-	
-	public void drawMan();
+
+    public void drawMan();
 }

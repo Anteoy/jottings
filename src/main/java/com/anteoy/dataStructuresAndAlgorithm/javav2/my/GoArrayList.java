@@ -7,14 +7,14 @@ import java.util.NoSuchElementException;
  * Created by zhoudazhuang on 17-3-1.
  * Description: 自己设计Arrarylist GoArrayList
  */
-public class GoArrayList<T> implements Iterable<T>
-{
+public class GoArrayList<T> implements Iterable<T> {
     //定义默认容量
-    private static final int DEFAULT_CAPACITY=10;
+    private static final int DEFAULT_CAPACITY = 10;
     //定义当前存储的T[] 数组
     private T[] currentItems;
     //当前容量 size
     private int currentSize;
+
     //构造函数
     public GoArrayList() {
         clear();
@@ -36,71 +36,69 @@ public class GoArrayList<T> implements Iterable<T>
 
     /**
      * 保证容量，自动扩容
+     *
      * @param newCapacity 新的容器大小
      */
-    public void ensureCapacity(int newCapacity)
-    {
+    public void ensureCapacity(int newCapacity) {
         //指定新容量小如当前实际容量大小
-        if (newCapacity< currentSize)
-            return ;
-        T[] old= currentItems;
-        currentItems =(T[])new Object[newCapacity];
-        for (int i = 0; i < size(); i++){
-            currentItems[i]=old[i];
+        if (newCapacity < currentSize)
+            return;
+        T[] old = currentItems;
+        currentItems = (T[]) new Object[newCapacity];
+        for (int i = 0; i < size(); i++) {
+            currentItems[i] = old[i];
         }
     }
 
     /**
      * clear和默认构造函数调用
      */
-    public void clear()
-    {
-        currentSize =0;
+    public void clear() {
+        currentSize = 0;
         //初始化容量大小
         ensureCapacity(DEFAULT_CAPACITY);
     }
 
     /**
      * 返回当前容量大小
+     *
      * @return
      */
-    public int size(){
+    public int size() {
         return currentSize;
     }
 
     /**
      * 判断当前ArrayList是否为空
+     *
      * @return
      */
-    public boolean isEmpty()
-    {
-        return size()==0;
+    public boolean isEmpty() {
+        return size() == 0;
     }
 
     /**
-     *
      * @param index 数组下标
      * @return
      */
-    public T get(int index)
-    {
-        if (index<0 || index>size())
+    public T get(int index) {
+        if (index < 0 || index > size())
             throw new ArrayIndexOutOfBoundsException();
         return currentItems[index];
     }
 
     /**
      * set 方法
+     *
      * @param index
      * @param newVal
      * @return currentItems[index]
      */
-    public T set(int index, T newVal)
-    {
-        if (index<0 ||index >size())
+    public T set(int index, T newVal) {
+        if (index < 0 || index > size())
             throw new ArrayIndexOutOfBoundsException();
-        T old= currentItems[index];
-        currentItems[index]=newVal  ;
+        T old = currentItems[index];
+        currentItems[index] = newVal;
         return old;
     }
 
@@ -109,58 +107,58 @@ public class GoArrayList<T> implements Iterable<T>
      * ArrayList所说没有用的值并不是null，而是ArrayList每次增长会预申请多一点空间
      * trimToSize 的作用只是去掉预留元素位置
      */
-    public void trimToSize()
-    {
+    public void trimToSize() {
         ensureCapacity(size());
     }
 
     /**
      * add 操作
+     *
      * @param index
      * @param x
      */
-    public void add(int index, T x)
-    {
-        if (currentItems.length== currentSize)
+    public void add(int index, T x) {
+        if (currentItems.length == currentSize)
             //扩容1.5倍
-            ensureCapacity(currentSize *2+1);
+            ensureCapacity(currentSize * 2 + 1);
         //add添加过后，其余元素依次后移
-        for(int i = currentSize; i>index; i--)
-            currentItems[i]= currentItems[i-1];
-        currentItems[index]=x;
+        for (int i = currentSize; i > index; i--)
+            currentItems[i] = currentItems[i - 1];
+        currentItems[index] = x;
         currentSize++;
     }
 
     /**
      * 默认从最后位置添加移动
+     *
      * @param x
      * @return
      */
-    public boolean add(T x)
-    {
+    public boolean add(T x) {
         add(currentSize, x);
         return true;
     }
 
     /**
      * 移除
+     *
      * @param index
      * @return removeItem
      */
-    public T remove(int index)
-    {
-        if (index<0 || index> currentSize -1)
+    public T remove(int index) {
+        if (index < 0 || index > currentSize - 1)
             throw new ArrayIndexOutOfBoundsException();
-        T removeItem= currentItems[index];
+        T removeItem = currentItems[index];
 
         //移除的拿右边的元素填充
-        for(int i = index; i< currentSize -1; i++)
-            currentItems[i]= currentItems[i+1];
+        for (int i = index; i < currentSize - 1; i++)
+            currentItems[i] = currentItems[i + 1];
         currentSize--;
         return removeItem;
     }
 
     //
+
     /**
      * 覆写iterator方法，返回一个用于ArrayList的iterator对象
      */
@@ -174,25 +172,24 @@ public class GoArrayList<T> implements Iterable<T>
      * 内部类，实现arraylist的迭代器
      * 非静态嵌套类，也即是被称作为内部类
      */
-    private  class ArrayListIterator implements Iterator<T>
-    {
+    private class ArrayListIterator implements Iterator<T> {
         //遍历指针指向的当前位置
-        private int current=0;
+        private int current = 0;
+
         //是否有下一个元素
-        public boolean hasNext()
-        {
-            return current< currentSize;
+        public boolean hasNext() {
+            return current < currentSize;
         }
+
         //返回下一个元素
-        public T next()
-        {
+        public T next() {
             if (!hasNext())
                 throw new NoSuchElementException();
             //current的值会+1
             return currentItems[current++];
         }
-        public void remove()
-        {
+
+        public void remove() {
             //之前next获取的对象的指针指向位置current++ 所以remove之前--current 否则删除的元素不是当前元素
             GoArrayList.this.remove(--current);
 

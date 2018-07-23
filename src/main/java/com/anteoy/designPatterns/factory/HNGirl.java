@@ -1,15 +1,16 @@
 package com.anteoy.designPatterns.factory;
+
 /**
  * ����ϵ�е�Ů����
- * @author Administrator
  *
+ * @author Administrator
  */
 public class HNGirl implements Girl {
 
-	@Override
-	public void drawWomen() {
-		// TODO Auto-generated method stub
-		System.out.println("-----------------����ϵ�е�Ů����--------------------");
-	}
+    @Override
+    public void drawWomen() {
+        // TODO Auto-generated method stub
+        System.out.println("-----------------����ϵ�е�Ů����--------------------");
+    }
 
 }

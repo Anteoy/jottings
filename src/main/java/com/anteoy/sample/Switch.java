@@ -9,9 +9,9 @@ package com.anteoy.sample;
 public class Switch {
     public static void main(String[] args) {
         int a = 0;
-        switch (a){
+        switch (a) {
             case 0:
-                String aa  = "hello";
+                String aa = "hello";
                 System.out.println(aa.length());
                 System.out.println(00);
 //                break;

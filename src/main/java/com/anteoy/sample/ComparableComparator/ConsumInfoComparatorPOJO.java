@@ -18,7 +18,7 @@ public class ConsumInfoComparatorPOJO {
     private double price;
     private Date datetime;
 
-    public ConsumInfoComparatorPOJO(int uid,String name,double price,Date datetime){
+    public ConsumInfoComparatorPOJO(int uid, String name, double price, Date datetime) {
         this.uid = uid;
         this.name = name;
         this.price = price;

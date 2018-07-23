@@ -1,16 +1,17 @@
-    package DataStructures;
+package DataStructures;
 
+/**
+ * Protocol for Hashable objects.
+ *
+ * @author Mark Allen Weiss
+ */
+public interface Hashable {
     /**
-     * Protocol for Hashable objects.
-     * @author Mark Allen Weiss
+     * Compute a hash function for this object.
+     *
+     * @param tableSize the hash table size.
+     * @return (deterministically) a number between
+     * 0 and tableSize-1, distributed equitably.
      */
-    public interface Hashable
-    {
-        /**
-         * Compute a hash function for this object.
-         * @param tableSize the hash table size.
-         * @return (deterministically) a number between
-         *     0 and tableSize-1, distributed equitably.
-         */
-        int hash(int tableSize);
-    }
+    int hash(int tableSize);
+}

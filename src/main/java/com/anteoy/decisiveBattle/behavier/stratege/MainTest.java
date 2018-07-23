@@ -7,6 +7,6 @@ package com.anteoy.decisiveBattle.behavier.stratege;
 public class MainTest {
     public static void main(String[] args) {
         ContextRuntime contextRuntime = new ContextRuntime(new AddStratege());
-        System.out.println(contextRuntime.executeStratege(3,2));
+        System.out.println(contextRuntime.executeStratege(3, 2));
     }
 }

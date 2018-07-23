@@ -6,7 +6,7 @@ package com.anteoy.decisiveBattle.behavier.template;
  */
 public class MainTest {
     public static void main(String[] args) {
-        Game  game =  new Basketball();
+        Game game = new Basketball();
         game.play();
     }
 }

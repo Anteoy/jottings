@@ -5,7 +5,7 @@ package com.anteoy.decisiveBattle.structure.facade;
  */
 public class TestMain {
     public static void main(String[] args) {
-        ShapeFacade shapeFacade =  new ShapeFacade();
+        ShapeFacade shapeFacade = new ShapeFacade();
         shapeFacade.drawCircle();
         shapeFacade.drawRectangle();
     }

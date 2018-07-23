@@ -2,6 +2,7 @@ package com.anteoy.designPatterns.observePattern;
 
 /**
  * 具体的观察者对象，实现更新的方法，使自身状态和目标的状态保持一致
+ *
  * @Author 周巖 on
  * @Date 2016/3/25.17:55
  */
@@ -50,9 +51,9 @@ public class ConcreteObserver implements Observer {
 
     @Override
     public void update(WeatherSubject subject) {
-       // observerStates = ((ConcreteWeatherSubject)subject).getSubjectStates();
+        // observerStates = ((ConcreteWeatherSubject)subject).getSubjectStates();
         //唯一从目标出获得内容
-        weather = ((ConcreteWeatherSubject)subject).getWeather();
-        System.out.println(observerName+"收到了"+weather+","+remindThing);
+        weather = ((ConcreteWeatherSubject) subject).getWeather();
+        System.out.println(observerName + "收到了" + weather + "," + remindThing);
     }
 }

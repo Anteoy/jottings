@@ -7,14 +7,14 @@ public class BitOperator {
     public static void main(String[] args) {
         // 0010
         System.out.println(~2);
-        System.out.println(2&3);
-        System.out.println(2|3);
+        System.out.println(2 & 3);
+        System.out.println(2 | 3);
         System.out.println(~-5);
         System.out.println(~5);
-        System.out.println(13&7);
-        System.out.println(5|4);
-        System.out.println(-3^3);
-        System.out.println(4^8);
+        System.out.println(13 & 7);
+        System.out.println(5 | 4);
+        System.out.println(-3 ^ 3);
+        System.out.println(4 ^ 8);
 
 
         System.out.println(~4);//~ 在golang中相当于单独使用^ golang中 4^8和java中相同 为异或

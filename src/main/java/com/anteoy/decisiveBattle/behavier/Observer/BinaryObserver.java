@@ -3,7 +3,7 @@ package com.anteoy.decisiveBattle.behavier.Observer;
 /**
  * Created by zhoudazhuang on 17-12-11.
  */
-public class BinaryObserver extends Observer{
+public class BinaryObserver extends Observer {
 
     @Override
     public void update() {

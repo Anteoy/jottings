@@ -1,7 +1,6 @@
 package com.anteoy.lambda;
 
 /**
- *
  * @author Alin
  */
 public class Person {
@@ -49,5 +48,5 @@ public class Person {
     public void setSalary(int salary) {
         this.salary = salary;
     }
-    
+
 }

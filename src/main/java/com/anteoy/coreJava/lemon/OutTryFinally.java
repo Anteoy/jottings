@@ -9,14 +9,14 @@ package com.anteoy.coreJava.lemon;
 public class OutTryFinally {
     public static void main(String[] args) {
         int a = 0;
-        if(a == 0){
+        if (a == 0) {
             throw new RuntimeException("sdfsf");
         }
-        try{
+        try {
             System.out.println("aaa");
-        }catch (Exception e){
+        } catch (Exception e) {
 
-        }finally {
+        } finally {
             System.out.println("cccc");
         }
     }

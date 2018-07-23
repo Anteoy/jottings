@@ -8,15 +8,15 @@ public class StaticTest {
 
     public static int ooo = 345;
 
-    public StaticTest(){
+    public StaticTest() {
         System.out.println("构造器初始化");
     }
 
-    static{
+    static {
         System.out.println("static代码块初始化");
     }
 
-    public static void oo(){
+    public static void oo() {
         System.out.println("静态方法");
     }
 

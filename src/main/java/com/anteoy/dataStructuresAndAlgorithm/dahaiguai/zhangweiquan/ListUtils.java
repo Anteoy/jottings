@@ -10,7 +10,7 @@ package com.anteoy.dataStructuresAndAlgorithm.dahaiguai.zhangweiquan;
 public class ListUtils {
 
     //传入一个int数组 返回一个单链表起始root
-    public  static List getList(int[] arr) {
+    public static List getList(int[] arr) {
         if (arr == null || arr.length == 0) {
             return null;
         }

@@ -8,20 +8,22 @@ public class ByteRef {
         ByteRef byteRef = new ByteRef();
         byteRef.start();
     }
-    void start(){
+
+    void start() {
         Two two = new Two();
-        System.out.println(two.x +"");
+        System.out.println(two.x + "");
         Two t2 = fix(two);
-        System.out.println(two.x +" "+t2.x);
+        System.out.println(two.x + " " + t2.x);
     }
-    Two fix(Two tt){
-        tt.x=42;
+
+    Two fix(Two tt) {
+        tt.x = 42;
         return tt;
     }
 }
 
-class Two{
-//    Byte x;
+class Two {
+    //    Byte x;
     byte x;
 }
 

@@ -3,8 +3,8 @@ package com.anteoy.decisiveBattle.created.prototype;
 /**
  * Created by zhoudazhuang on 17-12-10.
  */
-public class Circle extends Shape{
-    public Circle(){
+public class Circle extends Shape {
+    public Circle() {
         type = "Circle";
     }
 

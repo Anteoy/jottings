@@ -1,14 +1,16 @@
 package com.anteoy.designPatterns.factory;
+
 /**
  * �����ʵ�ֽӿ�
- * @author Administrator
  *
+ * @author Administrator
  */
 public interface PersonFactory {
 
-	//�к��ӿ�
-	public Boy getBoy();
-	//Ů���ӿ�
-	public Girl getGirl();
-	
+    //�к��ӿ�
+    public Boy getBoy();
+
+    //Ů���ӿ�
+    public Girl getGirl();
+
 }

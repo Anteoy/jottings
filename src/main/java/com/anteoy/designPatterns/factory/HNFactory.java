@@ -1,21 +1,22 @@
 package com.anteoy.designPatterns.factory;
+
 /**
  * ����ϵ�мӹ���
- * @author Administrator
  *
+ * @author Administrator
  */
 public class HNFactory implements PersonFactory {
 
-	@Override
-	public Boy getBoy() {
-		// TODO Auto-generated method stub
-		return new HNBoy();
-	}
+    @Override
+    public Boy getBoy() {
+        // TODO Auto-generated method stub
+        return new HNBoy();
+    }
 
-	@Override
-	public Girl getGirl() {
-		// TODO Auto-generated method stub
-		return new HNGirl();
-	}
+    @Override
+    public Girl getGirl() {
+        // TODO Auto-generated method stub
+        return new HNGirl();
+    }
 
 }

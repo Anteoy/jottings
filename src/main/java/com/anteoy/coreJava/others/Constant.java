@@ -32,8 +32,6 @@ public interface Constant {
     String INTERFACE_KUAIXIN_BLACKLIST_AUDIT = "kuaixin_blacklist_audit";                       //黑名单验证
 
 
-
-
     /****************************************** collection ********************************************/
 
     // yimei
@@ -44,9 +42,6 @@ public interface Constant {
 
     // kuaixin
     String MONGO_KUAIXIN_BLACKLIST_AUDIT = "kuaixin_blacklist_audit";                               //黑名单验证
-
-
-
 
 
     /****************************************** mysql ********************************************/
@@ -61,7 +56,6 @@ public interface Constant {
     String MYSQL_KUAIXIN_BLACKLIST_AUDIT = "kuaixin_blacklist_audit_logs";                          //黑名单验证
 
 
-
     /****************************************** 时间戳 ********************************************/
 
     Long TIMESTAMP_ONE_SECOND = 1000L;                                                                  // 1秒
@@ -73,11 +67,6 @@ public interface Constant {
     Long TIMESTAMP_TWENTYTHREE_HOUR = 23 * 60 * 60 * 1000L;                                             // 23小时
     Long TIMESTAMP_ONE_DAY = 24 * 60 * 60 * 1000L;                                                      // 1天
     Long TIMESTAMP_TWO_MONTH = 60 * 24 * 60 * 60 * 1000L;                                               // 两个月
-
-
-
-
-
 
 
 }

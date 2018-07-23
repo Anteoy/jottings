@@ -22,6 +22,7 @@ import java.util.Map;
 @ControllerAdvice
 public class ControllerAdviceHandler {
     private static final Logger log = LoggerFactory.getLogger(ControllerAdviceHandler.class);
+
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
@@ -29,7 +30,7 @@ public class ControllerAdviceHandler {
         Map<String, Object> hello = new HashMap<>(2);
         hello.put("hello", "helllo msg");
         hello.put("msg", e.getMessage());
-        String a ="日本人";
+        String a = "日本人";
         org.slf4j.Marker marker;
         log.error("error in url:{}, reason: {}", request.getRequestURI().toString(), e);
         return hello;

@@ -1,10 +1,11 @@
 package com.anteoy.designPatterns.factory;
+
 /**
  * Ů����
- * @author Administrator
  *
+ * @author Administrator
  */
 public interface Girl {
 
-	public void drawWomen();
+    public void drawWomen();
 }

@@ -3,7 +3,7 @@ package com.anteoy.decisiveBattle.created.prototype;
 /**
  * Created by zhoudazhuang on 17-12-10.
  */
-public abstract class Shape implements Cloneable{
+public abstract class Shape implements Cloneable {
     private String id;
     public String type;
 
@@ -25,11 +25,13 @@ public abstract class Shape implements Cloneable{
         this.type = type;
     }
 
-    public Object clone(){
+    public Object clone() {
         Object objects = null;
         try {
             objects = super.clone();
-        }catch (Exception e){e.printStackTrace();}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return objects;
     }
 }

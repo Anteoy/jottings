@@ -3,7 +3,7 @@ package com.anteoy.coreJava.concurrent;
 /**
  * Created by root on 16-7-10.
  */
-public class Yield extends Thread{
+public class Yield extends Thread {
     public Yield(String name) {
         super(name);
     }

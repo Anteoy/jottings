@@ -11,9 +11,9 @@ import java.util.Map;
  */
 public class Maptostring {
     public static void main(String[] args) {
-        Map<String,String> map = new HashMap<>();
-        map.put("a","1");
-        map.put("b","2");
+        Map<String, String> map = new HashMap<>();
+        map.put("a", "1");
+        map.put("b", "2");
         String mapstr = map.toString();
         System.out.println(mapstr);
 

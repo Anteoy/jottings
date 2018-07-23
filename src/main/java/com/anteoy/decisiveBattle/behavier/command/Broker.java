@@ -9,11 +9,11 @@ import java.util.List;
 public class Broker {
     List<Order> orderList = new ArrayList<Order>();
 
-    void takeOrder(Order order){
+    void takeOrder(Order order) {
         orderList.add(order);
     }
 
-    void placeOrder(){
+    void placeOrder() {
         orderList.forEach(a -> a.execute());
     }
 }

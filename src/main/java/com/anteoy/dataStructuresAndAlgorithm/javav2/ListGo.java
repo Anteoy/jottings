@@ -15,10 +15,10 @@ public class ListGo {
         arrayList.add(3);
 
         //进栈
-        arrayList.add(arrayList.size(),2);
+        arrayList.add(arrayList.size(), 2);
 
         //出栈
-        arrayList.remove(arrayList.size()-1);
+        arrayList.remove(arrayList.size() - 1);
 
         System.out.println(arrayList);
     }

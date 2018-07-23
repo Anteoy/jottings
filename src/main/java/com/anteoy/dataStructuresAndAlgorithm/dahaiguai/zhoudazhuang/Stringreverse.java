@@ -38,16 +38,19 @@ public class Stringreverse {
      * 链接：https://www.nowcoder.com/questionTerminal/dc3542438f3f4dc5ba3e2ce66b44a20e
      * 来源：牛客网
      * 例如 str ="abcd" 
-     * 长度是4 ，只需要进行a 与d  b 与 c交换
+     *  长度是4 ，只需要进行a 与d  b 与 c交换
      * 声明两个指针 head ,tail.
      * head = str ; //指向头
      * tail= len-1;//指向尾节点
      * 让head和 tail交换,然后head++ ;tail--;
+     *
      * @param str
      * @return
      */
     static String reverString(String str) {
-        if (str == null || str.length() == 0) { return str;}
+        if (str == null || str.length() == 0) {
+            return str;
+        }
         char[] chArr = str.toCharArray();
         char tmp = '\0';//redundant 多余的
         int head = 0;

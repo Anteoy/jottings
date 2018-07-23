@@ -8,19 +8,18 @@ import java.util.concurrent.FutureTask;
  * Created by zhoudazhuang on 17-3-15.
  * Description: 线程第三种实现方式 callback 测试
  */
-public class CallableThreadTest implements Callable<String>{
-    public static void main(String[] args)
-    {
+public class CallableThreadTest implements Callable<String> {
+    public static void main(String[] args) {
         CallableThreadTest ctt = new CallableThreadTest();
         FutureTask<String> ft = new FutureTask<String>(ctt);
-        for(int i = 0;i < 100;i++) {
-            System.out.println(Thread.currentThread().getName()+" 的循环变量i的值"+i);
-            if(i==20) {
-                new Thread(ft,"有返回值的线程").start();
+        for (int i = 0; i < 100; i++) {
+            System.out.println(Thread.currentThread().getName() + " 的循环变量i的值" + i);
+            if (i == 20) {
+                new Thread(ft, "有返回值的线程").start();
             }
         }
         try {
-            System.out.println("子线程callable的返回值："+ft.get());
+            System.out.println("子线程callable的返回值：" + ft.get());
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -30,12 +29,10 @@ public class CallableThreadTest implements Callable<String>{
     }
 
     @Override
-    public String call() throws Exception
-    {
+    public String call() throws Exception {
         int i = 0;
-        for(;i<100;i++)
-        {
-            System.out.println(Thread.currentThread().getName()+" "+i);
+        for (; i < 100; i++) {
+            System.out.println(Thread.currentThread().getName() + " " + i);
         }
         return String.valueOf(i);
     }

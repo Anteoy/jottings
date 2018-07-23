@@ -3,7 +3,7 @@ package com.anteoy.decisiveBattle.structure.adaptor;
 /**
  * Created by zhoudazhuang on 17-12-10.
  */
-public class VlcPlayer implements AdvancedMediaPlayer{
+public class VlcPlayer implements AdvancedMediaPlayer {
     @Override
     public void playvlc() {
         System.out.println("播放vlc");

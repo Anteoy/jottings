@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by zhoudazhuang on 17-12-13.
  */
-public class CriteriaSingle implements Criteria{
+public class CriteriaSingle implements Criteria {
 
     @Override
     public List<Person> meetCriteria(List<Person> persons) {

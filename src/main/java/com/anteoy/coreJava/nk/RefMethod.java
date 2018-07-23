@@ -13,7 +13,7 @@ public class RefMethod {
         System.out.println(a.equals(b));
     }
 
-    public static void doSomeThing(Integer integer){
+    public static void doSomeThing(Integer integer) {
 //        integer = new Integer(2);
 //        integer = 2;
         integer = Integer.valueOf(2);

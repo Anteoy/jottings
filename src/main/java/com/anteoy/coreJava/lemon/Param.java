@@ -8,21 +8,20 @@ package com.anteoy.coreJava.lemon;
  */
 public class Param {
 
-    public static void printParams(String... str){
-        if(str.length == 0){
+    public static void printParams(String... str) {
+        if (str.length == 0) {
             System.out.println("aa");
-        }
-        else{
+        } else {
             for (String string : str) {
-                System.out.println("bb("+string+")bb");
+                System.out.println("bb(" + string + ")bb");
             }
         }
     }
 
     public static void main(String[] args) {
         printParams();
-        printParams("a","b","c");
-        printParams("a","b","c","d");
-        printParams(new String[]{"A","B","C"});
+        printParams("a", "b", "c");
+        printParams("a", "b", "c", "d");
+        printParams(new String[]{"A", "B", "C"});
     }
 }

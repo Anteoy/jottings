@@ -6,7 +6,7 @@ package com.anteoy.dataStructuresAndAlgorithm.string_ritter;
 public class stringRitter {
     public static void main(String[] args) {
         String a = "ribenren";
-        String b = a.substring(1,2);
+        String b = a.substring(1, 2);
         System.out.println(b);
     }
 }

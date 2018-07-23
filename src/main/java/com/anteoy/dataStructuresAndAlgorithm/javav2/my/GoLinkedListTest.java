@@ -12,8 +12,8 @@ public class GoLinkedListTest {
         goLinkedList.add(1);
         goLinkedList.add(2);
         goLinkedList.add(3);
-        goLinkedList.add(2,4);
-        for (Integer go:goLinkedList){
+        goLinkedList.add(2, 4);
+        for (Integer go : goLinkedList) {
             System.out.println(go);
         }
         System.out.printf(String.valueOf(goLinkedList.get(1)));

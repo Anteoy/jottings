@@ -5,6 +5,8 @@ package com.anteoy.decisiveBattle.created.creator;
  */
 public interface Item {
     String name();
+
     Packing packing();
+
     float price();
 }

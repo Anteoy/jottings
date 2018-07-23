@@ -7,5 +7,5 @@ package com.anteoy.coreJava.constant;
  * Description :
  */
 public class staticone {
-    static int a = 1 ;
+    static int a = 1;
 }

@@ -1,15 +1,16 @@
 package com.anteoy.designPatterns.factory;
+
 /**
  * ��ƫ�ַ���
- * @author Administrator
  *
+ * @author Administrator
  */
 public class RightHair implements HairInterface {
 
-	@Override
-	public void draw() {
-		// TODO Auto-generated method stub
-		System.out.println("-----------------��ƫ�ַ���-------------------");
-	}
+    @Override
+    public void draw() {
+        // TODO Auto-generated method stub
+        System.out.println("-----------------��ƫ�ַ���-------------------");
+    }
 
 }

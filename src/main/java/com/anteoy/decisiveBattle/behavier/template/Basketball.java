@@ -3,14 +3,14 @@ package com.anteoy.decisiveBattle.behavier.template;
 /**
  * Created by zhoudazhuang on 17-12-17.
  */
-public class Basketball extends Game{
+public class Basketball extends Game {
     @Override
     public void init() {
         System.out.println("basketball init ...");
     }
 
     @Override
-    public void  startPlay() {
+    public void startPlay() {
         System.out.println("start play basketball");
     }
 

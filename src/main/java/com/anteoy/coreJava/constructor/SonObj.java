@@ -6,8 +6,8 @@ package com.anteoy.coreJava.constructor;
  * Time: 上午10:54
  * Description :
  */
-public class SonObj extends TestObj{
-    public SonObj(){
+public class SonObj extends TestObj {
+    public SonObj() {
         super();//调用父类构造器
     }
 }

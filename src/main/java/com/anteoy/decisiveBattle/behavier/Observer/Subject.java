@@ -23,7 +23,7 @@ public class Subject {
         arrayList.add(observer);
     }
 
-    public void notifyAllObserver(){
+    public void notifyAllObserver() {
         arrayList.forEach(a -> {
             a.update();
         });

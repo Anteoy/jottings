@@ -5,11 +5,11 @@ package com.anteoy.designPatterns.adapter;
  */
 public class TwoPlugAdapterExtends extends GBTwoPlug implements ThreePlugIf {
 
-	@Override
-	public void powerWithThree() {
-		System.out.print("借助继承适配器");
-		this.powerWithTwo();
+    @Override
+    public void powerWithThree() {
+        System.out.print("借助继承适配器");
+        this.powerWithTwo();
 
-	}
+    }
 
 }

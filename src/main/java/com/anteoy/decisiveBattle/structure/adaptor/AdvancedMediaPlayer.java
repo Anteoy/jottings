@@ -5,5 +5,6 @@ package com.anteoy.decisiveBattle.structure.adaptor;
  */
 public interface AdvancedMediaPlayer {
     void playvlc();
+
     void playmp4();
 }

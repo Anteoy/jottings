@@ -4,13 +4,14 @@ package com.anteoy.dataStructuresAndAlgorithm.javav2.my;
  * Created by zhoudazhuang on 17-3-1.
  * Description: linkedlist 实现 栈和队列
  */
+
 import java.util.LinkedList;
 
 
 public class LinkedListTest {
     public static void main(String[] args) {
         // 测试LinkedList的API
-        testLinkedListAPIs() ;
+        testLinkedListAPIs();
 
         // 将LinkedList当作 LIFO(后进先出)的堆栈
         useLinkedListAsLIFO();
@@ -41,66 +42,65 @@ public class LinkedListTest {
         System.out.println("\nTest \"addFirst(), removeFirst(), getFirst()\"");
         // (01) 将“10”添加到第一个位置。  失败的话，抛出异常！
         llist.addFirst("10");
-        System.out.println("llist:"+llist);
+        System.out.println("llist:" + llist);
         // (02) 将第一个元素删除。        失败的话，抛出异常！
-        System.out.println("llist.removeFirst():"+llist.removeFirst());
-        System.out.println("llist:"+llist);
+        System.out.println("llist.removeFirst():" + llist.removeFirst());
+        System.out.println("llist:" + llist);
         // (03) 获取第一个元素。          失败的话，抛出异常！
-        System.out.println("llist.getFirst():"+llist.getFirst());
+        System.out.println("llist.getFirst():" + llist.getFirst());
 
 
         System.out.println("\nTest \"offerFirst(), pollFirst(), peekFirst()\"");
         // (01) 将“10”添加到第一个位置。  返回true。
         llist.offerFirst("10");
-        System.out.println("llist:"+llist);
+        System.out.println("llist:" + llist);
         // (02) 将第一个元素删除。        失败的话，返回null。
-        System.out.println("llist.pollFirst():"+llist.pollFirst());
-        System.out.println("llist:"+llist);
+        System.out.println("llist.pollFirst():" + llist.pollFirst());
+        System.out.println("llist:" + llist);
         // (03) 获取第一个元素。          失败的话，返回null。
-        System.out.println("llist.peekFirst():"+llist.peekFirst());
+        System.out.println("llist.peekFirst():" + llist.peekFirst());
 
 
         System.out.println("\nTest \"addLast(), removeLast(), getLast()\"");
         // (01) 将“20”添加到最后一个位置。  失败的话，抛出异常！
         llist.addLast("20");
-        System.out.println("llist:"+llist);
+        System.out.println("llist:" + llist);
         // (02) 将最后一个元素删除。        失败的话，抛出异常！
-        System.out.println("llist.removeLast():"+llist.removeLast());
-        System.out.println("llist:"+llist);
+        System.out.println("llist.removeLast():" + llist.removeLast());
+        System.out.println("llist:" + llist);
         // (03) 获取最后一个元素。          失败的话，抛出异常！
-        System.out.println("llist.getLast():"+llist.getLast());
+        System.out.println("llist.getLast():" + llist.getLast());
 
 
         System.out.println("\nTest \"offerLast(), pollLast(), peekLast()\"");
         // (01) 将“20”添加到第一个位置。  返回true。
         llist.offerLast("20");
-        System.out.println("llist:"+llist);
+        System.out.println("llist:" + llist);
         // (02) 将第一个元素删除。        失败的话，返回null。
-        System.out.println("llist.pollLast():"+llist.pollLast());
-        System.out.println("llist:"+llist);
+        System.out.println("llist.pollLast():" + llist.pollLast());
+        System.out.println("llist:" + llist);
         // (03) 获取第一个元素。          失败的话，返回null。
-        System.out.println("llist.peekLast():"+llist.peekLast());
-
+        System.out.println("llist.peekLast():" + llist.peekLast());
 
 
         // 将第3个元素设置300。不建议在LinkedList中使用此操作，因为效率低！
         llist.set(2, "300");
         // 获取第3个元素。不建议在LinkedList中使用此操作，因为效率低！
-        System.out.println("\nget(3):"+llist.get(2));
+        System.out.println("\nget(3):" + llist.get(2));
 
 
         // ---- toArray(T[] a) ----
         // 将LinkedList转行为数组
-        String[] arr = (String[])llist.toArray(new String[0]);
-        for (String str:arr)
-            System.out.println("str:"+str);
+        String[] arr = (String[]) llist.toArray(new String[0]);
+        for (String str : arr)
+            System.out.println("str:" + str);
 
         // 输出大小
-        System.out.println("size:"+llist.size());
+        System.out.println("size:" + llist.size());
         // 清空LinkedList
         llist.clear();
         // 判断LinkedList是否为空
-        System.out.println("isEmpty():"+llist.isEmpty()+"\n");
+        System.out.println("isEmpty():" + llist.isEmpty() + "\n");
 
     }
 
@@ -118,16 +118,16 @@ public class LinkedListTest {
         stack.push("3");
         stack.push("4");
         // 打印“栈”
-        System.out.println("stack:"+stack);
+        System.out.println("stack:" + stack);
 
         // 删除“栈顶元素”
-        System.out.println("stack.pop():"+stack.pop());
+        System.out.println("stack.pop():" + stack.pop());
 
         // 取出“栈顶元素”
-        System.out.println("stack.peek():"+stack.peek());
+        System.out.println("stack.peek():" + stack.peek());
 
         // 打印“栈”
-        System.out.println("stack:"+stack);
+        System.out.println("stack:" + stack);
     }
 
     /**
@@ -144,15 +144,15 @@ public class LinkedListTest {
         queue.add("30");
         queue.add("40");
         // 打印“队列”
-        System.out.println("queue:"+queue);
+        System.out.println("queue:" + queue);
 
         // 删除(队列的第一个元素)
-        System.out.println("queue.remove():"+queue.remove());
+        System.out.println("queue.remove():" + queue.remove());
 
         // 读取(队列的第一个元素)
-        System.out.println("queue.element():"+queue.element());
+        System.out.println("queue.element():" + queue.element());
 
         // 打印“队列”
-        System.out.println("queue:"+queue);
+        System.out.println("queue:" + queue);
     }
 }

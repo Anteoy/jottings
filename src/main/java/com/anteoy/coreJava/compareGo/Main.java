@@ -6,12 +6,12 @@ import java.util.concurrent.Executors;
  * Created by zhoudazhuang on 14-8-15.
  * jdk1.7以及一下
  * new Runnable() {
-@Override
-public void run() {
-
-}
-jdk1.8可使用lambda
-() -> {}
+ *
+ * @Override public void run() {
+ * <p>
+ * }
+ * jdk1.8可使用lambda
+ * () -> {}
  * 1. javac Main.java
  * 2. java Main(java二进制字节码,这样就可以运行了 不过这里再准备打包成运行jar包)
  * 3. jar -cvf my.jar *.class
@@ -20,15 +20,16 @@ jdk1.8可使用lambda
  * 输出
  * # time java -server -jar my.jar
  * elapsed time: 0.041s
- *  java -server -jar my.jar  0.26s user 0.01s system 215% cpu 0.126 total
+ * java -server -jar my.jar  0.26s user 0.01s system 215% cpu 0.126 total
  * time ls; time java是linux命令 不用-server我感觉输出也一样
  */
 public class Main {
     private static final int TIMES = 100 * 1000 * 100;
+
     public static void main(String[] args) throws Exception {
         ExecutorService service = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         long t1 = System.currentTimeMillis();
-        for (int i=0;i<TIMES;i++) {
+        for (int i = 0; i < TIMES; i++) {
             service.submit(new Runnable() {
                 @Override
                 public void run() {
@@ -38,6 +39,6 @@ public class Main {
         }
         service.shutdown();
         long t2 = System.currentTimeMillis();
-        System.out.printf("elapsed time: %.3fs\n", (t2-t1)/1000f);
+        System.out.printf("elapsed time: %.3fs\n", (t2 - t1) / 1000f);
     }
 }

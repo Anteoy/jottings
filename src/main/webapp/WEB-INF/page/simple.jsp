@@ -11,10 +11,11 @@
     <title>Title</title>
 </head>
 <body>
-    oooooo
+oooooo
 <script>
     var a = 2;
-    if(1<a<3){}
+    if (1 < a < 3) {
+    }
 </script>
 </body>
 </html>

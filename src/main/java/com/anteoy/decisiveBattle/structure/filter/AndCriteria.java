@@ -6,7 +6,7 @@ import java.util.List;
  * Created by zhoudazhuang on 17-12-13.
  * 组合过滤
  */
-public class AndCriteria implements Criteria{
+public class AndCriteria implements Criteria {
 
     public Criteria criteria;
 
@@ -19,6 +19,6 @@ public class AndCriteria implements Criteria{
 
     @Override
     public List<Person> meetCriteria(List<Person> persons) {
-        return   otherCriteria.meetCriteria(criteria.meetCriteria(persons));
+        return otherCriteria.meetCriteria(criteria.meetCriteria(persons));
     }
 }

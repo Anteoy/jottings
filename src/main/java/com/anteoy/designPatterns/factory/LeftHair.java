@@ -1,15 +1,16 @@
 package com.anteoy.designPatterns.factory;
+
 /**
  * 左偏分发型
- * @author Administrator
  *
+ * @author Administrator
  */
 public class LeftHair implements HairInterface {
 
-	@Override
-	public void draw() {
-		// TODO Auto-generated method stub
-		System.out.println("-----------------左偏分发型-------------------");
-	}
+    @Override
+    public void draw() {
+        // TODO Auto-generated method stub
+        System.out.println("-----------------左偏分发型-------------------");
+    }
 
 }

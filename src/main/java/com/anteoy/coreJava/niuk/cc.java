@@ -5,7 +5,8 @@ package com.anteoy.coreJava.niuk;
  */
 public interface cc {
     void a();
-    default void hh(){
+
+    default void hh() {
         System.out.println("i am hh");
     }
 }

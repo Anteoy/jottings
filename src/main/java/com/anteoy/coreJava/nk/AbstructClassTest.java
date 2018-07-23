@@ -11,7 +11,7 @@ public class AbstructClassTest {
 //
 //        }
 //    };
-    public static void Test(){
+    public static void Test() {
         System.out.println("a");
     }
 

@@ -11,6 +11,7 @@ public class StackByLinkedList {
     public static void main(String[] args) {
         useLinkedListAsLIFO();
     }
+
     /**
      * 将LinkedList当作 LIFO(后进先出)的堆栈
      */
@@ -27,12 +28,12 @@ public class StackByLinkedList {
         System.out.println(stack);
 
         // 删除“栈顶元素”
-        System.out.println("stack.pop():"+stack.pop());
+        System.out.println("stack.pop():" + stack.pop());
 
         // 取出“栈顶元素”
-        System.out.println("stack.peek():"+stack.peek());
+        System.out.println("stack.peek():" + stack.peek());
 
         // 打印“栈”
-        System.out.println("stack:"+stack);
+        System.out.println("stack:" + stack);
     }
 }

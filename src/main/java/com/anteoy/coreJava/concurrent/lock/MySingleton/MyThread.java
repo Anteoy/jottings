@@ -3,7 +3,7 @@ package com.anteoy.coreJava.concurrent.lock.MySingleton;
 /**
  * Created by root on 17-3-19.
  */
-public class MyThread extends Thread{
+public class MyThread extends Thread {
 
     @Override
     public void run() {
@@ -18,7 +18,7 @@ public class MyThread extends Thread{
     public static void main(String[] args) {
 
         MyThread[] mts = new MyThread[10];
-        for(int i = 0 ; i < mts.length ; i++){
+        for (int i = 0; i < mts.length; i++) {
             mts[i] = new MyThread();
         }
 

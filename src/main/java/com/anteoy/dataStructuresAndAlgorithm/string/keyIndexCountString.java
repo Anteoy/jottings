@@ -1,19 +1,16 @@
 package com.anteoy.dataStructuresAndAlgorithm.string;
 
 /**
- * 建索引计数法 
+ * 建索引计数法
  *
  * @author zhoudazhuang
- *
  */
 public class keyIndexCountString {
     /**
      * 使用键索引计数法对学生数组a，以键key进行分组排序
      *
-     * @param a
-     *            学生数组a
-     * @param R
-     *            分组个数R
+     * @param a 学生数组a
+     * @param R 分组个数R
      */
     public static void sort(Student[] a, int R) {
         int N = a.length;
@@ -22,7 +19,7 @@ public class keyIndexCountString {
 
         // 第一步，计算出现的频率
         for (int i = 0; i < N; i++) {
-            System.out.println("a[i]:"+a[i].key());
+            System.out.println("a[i]:" + a[i].key());
 //            System.out.println(count[a[i].key() + 1]);
 //            System.out.println(count[a[i].key() + 1]++);
             count[a[i].key() + 1]++;
@@ -52,7 +49,7 @@ public class keyIndexCountString {
         Student stu5 = new Student("akf", 2);
         Student stu6 = new Student("erk", 1);
 
-        Student[] stus = { stu1, stu2, stu3, stu4, stu5, stu6 };
+        Student[] stus = {stu1, stu2, stu3, stu4, stu5, stu6};
         sort(stus, 5);
 
         for (int i = 0; i < stus.length; i++) {

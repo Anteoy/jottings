@@ -5,13 +5,13 @@ package com.anteoy.decisiveBattle.structure.facade;
  */
 public class ShapeFacade {
     public Circle circle = new Circle();
-    public Rectangle rectangle  =  new Rectangle();
+    public Rectangle rectangle = new Rectangle();
 
-    public void drawCircle(){
+    public void drawCircle() {
         circle.draw();
     }
 
-    public void drawRectangle(){
+    public void drawRectangle() {
         rectangle.draw();
     }
 }

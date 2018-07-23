@@ -8,11 +8,11 @@ public class Stock {
     String name = "ribenren";
     int quantity = 20;
 
-    void buy(){
-        System.out.println("stock name:"+name+"quantity:"+quantity+"boy");
+    void buy() {
+        System.out.println("stock name:" + name + "quantity:" + quantity + "boy");
     }
 
-    void sell(){
-        System.out.println("stock name:"+name+"quantity:"+quantity+"sell");
+    void sell() {
+        System.out.println("stock name:" + name + "quantity:" + quantity + "sell");
     }
 }

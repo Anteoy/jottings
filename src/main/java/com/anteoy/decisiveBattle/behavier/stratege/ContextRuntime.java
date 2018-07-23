@@ -10,7 +10,7 @@ public class ContextRuntime {
         this.stratege = stratege;
     }
 
-    public int executeStratege(int a,int b){
-        return stratege.doOperation(a,b);
+    public int executeStratege(int a, int b) {
+        return stratege.doOperation(a, b);
     }
 }

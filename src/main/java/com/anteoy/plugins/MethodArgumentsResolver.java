@@ -22,6 +22,7 @@ public class MethodArgumentsResolver implements HandlerMethodArgumentResolver {
 
     /**
      * 判断是否支持要转换的参数类型
+     *
      * @param parameter
      * @return
      */
@@ -32,6 +33,7 @@ public class MethodArgumentsResolver implements HandlerMethodArgumentResolver {
 
     /**
      * 当支持后进行相应的转换
+     *
      * @param parameter
      * @param mavContainer
      * @param webRequest
@@ -49,9 +51,9 @@ public class MethodArgumentsResolver implements HandlerMethodArgumentResolver {
         String[] val;
         Field[] frr = parameter.getParameterType().getDeclaredFields();
         for (Iterator<String> itr = webRequest.getParameterNames(); itr
-                .hasNext();) {
+                .hasNext(); ) {
             tmp = new StringBuffer(itr.next());
-            if (tmp.indexOf(objName) < 0)continue;
+            if (tmp.indexOf(objName) < 0) continue;
             for (int i = 0; i < frr.length; i++) {
                 frr[i].setAccessible(true);
                 if (tmp.toString().equals(objName + frr[i].getName())) {

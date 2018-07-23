@@ -23,15 +23,15 @@ public class Xipai {
 
     public static void main(String[] args) {
         int[] ints = new int[64];
-        for (int i = 0;i<64;i++){
+        for (int i = 0; i < 64; i++) {
             ints[i] = i;
         }
         shuffle(ints);
-        for (int test: ints){
+        for (int test : ints) {
             System.out.println(test);
         }
 
         int a = 3;
-        System.out.println("test: "+ a);
+        System.out.println("test: " + a);
     }
 }

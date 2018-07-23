@@ -7,10 +7,14 @@ package com.anteoy.decisiveBattle.structure.bridge;
  * 2. 这里的draw可以留到子类去实现，桥接模式的作用就是把这个类的抽象和实现进行分离了，抽象就是shape的形状，实现就是具体的draw,抽象shape依赖于实现draw
  */
 public abstract class Shape {
-     public DrawAPI drawApi = null;
-     abstract void Shape();
-     String draw(){
-         drawApi.drawCircle();
-         return "getted draw";
-     };
+    public DrawAPI drawApi = null;
+
+    abstract void Shape();
+
+    String draw() {
+        drawApi.drawCircle();
+        return "getted draw";
+    }
+
+    ;
 }

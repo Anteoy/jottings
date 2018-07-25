@@ -2,6 +2,7 @@ package com.anteoy.controller;
 
 import com.anteoy.annotation.FormModel;
 import com.anteoy.entity.Person;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -27,12 +28,12 @@ public class SimpleController {
     @RequestMapping("/index")
     public ModelAndView index(HttpServletRequest request) {
         String oo = request.getParameter("oo");
-        if (oo.equals("oo")) {
+        if (StringUtils.isNotBlank(oo) && oo.equals("oo")) {
             throw new RuntimeException("error in index");
             // return new ModelAndView("redirect:/" + index);
         }
-        return null;
-        // return new ModelAndView(index);
+//        return null;
+         return new ModelAndView("index");
     }
 
     @ResponseBody

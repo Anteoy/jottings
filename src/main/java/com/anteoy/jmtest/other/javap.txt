@@ -1,0 +1,255 @@
+警告: 二进制文件CountAdd包含com.anteoy.jmtest.other.CountAdd
+Classfile /home/zhoudazhuang/IdeaProjects/jottings/src/main/java/com/anteoy/jmtest/other/CountAdd.class
+  Last modified 2019-1-9; size 1178 bytes
+  MD5 checksum ac43682a502f0f0ff6cc4e140daf02f4
+  Compiled from "CountAdd.java"
+public class com.anteoy.jmtest.other.CountAdd
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #14.#28        // java/lang/Object."<init>":()V
+   #2 = Methodref          #13.#29        // com/anteoy/jmtest/other/CountAdd.t1:()V
+   #3 = Methodref          #13.#30        // com/anteoy/jmtest/other/CountAdd.t2:()V
+   #4 = Methodref          #13.#31        // com/anteoy/jmtest/other/CountAdd.t3:()V
+   #5 = Fieldref           #32.#33        // java/lang/System.out:Ljava/io/PrintStream;
+   #6 = Class              #34            // java/lang/StringBuilder
+   #7 = Methodref          #6.#28         // java/lang/StringBuilder."<init>":()V
+   #8 = Methodref          #6.#35         // java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   #9 = String             #36            // <--
+  #10 = Methodref          #6.#37         // java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #11 = Methodref          #6.#38         // java/lang/StringBuilder.toString:()Ljava/lang/String;
+  #12 = Methodref          #39.#40        // java/io/PrintStream.println:(Ljava/lang/String;)V
+  #13 = Class              #41            // com/anteoy/jmtest/other/CountAdd
+  #14 = Class              #42            // java/lang/Object
+  #15 = Utf8               <init>
+  #16 = Utf8               ()V
+  #17 = Utf8               Code
+  #18 = Utf8               LineNumberTable
+  #19 = Utf8               main
+  #20 = Utf8               ([Ljava/lang/String;)V
+  #21 = Utf8               t1
+  #22 = Utf8               StackMapTable
+  #23 = Utf8               t4
+  #24 = Utf8               t2
+  #25 = Utf8               t3
+  #26 = Utf8               SourceFile
+  #27 = Utf8               CountAdd.java
+  #28 = NameAndType        #15:#16        // "<init>":()V
+  #29 = NameAndType        #21:#16        // t1:()V
+  #30 = NameAndType        #24:#16        // t2:()V
+  #31 = NameAndType        #25:#16        // t3:()V
+  #32 = Class              #43            // java/lang/System
+  #33 = NameAndType        #44:#45        // out:Ljava/io/PrintStream;
+  #34 = Utf8               java/lang/StringBuilder
+  #35 = NameAndType        #46:#47        // append:(I)Ljava/lang/StringBuilder;
+  #36 = Utf8               <--
+  #37 = NameAndType        #46:#48        // append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #38 = NameAndType        #49:#50        // toString:()Ljava/lang/String;
+  #39 = Class              #51            // java/io/PrintStream
+  #40 = NameAndType        #52:#53        // println:(Ljava/lang/String;)V
+  #41 = Utf8               com/anteoy/jmtest/other/CountAdd
+  #42 = Utf8               java/lang/Object
+  #43 = Utf8               java/lang/System
+  #44 = Utf8               out
+  #45 = Utf8               Ljava/io/PrintStream;
+  #46 = Utf8               append
+  #47 = Utf8               (I)Ljava/lang/StringBuilder;
+  #48 = Utf8               (Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #49 = Utf8               toString
+  #50 = Utf8               ()Ljava/lang/String;
+  #51 = Utf8               java/io/PrintStream
+  #52 = Utf8               println
+  #53 = Utf8               (Ljava/lang/String;)V
+{
+  public com.anteoy.jmtest.other.CountAdd();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 20: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #2                  // Method t1:()V
+         3: invokestatic  #3                  // Method t2:()V
+         6: invokestatic  #4                  // Method t3:()V
+         9: return
+      LineNumberTable:
+        line 23: 0
+        line 24: 3
+        line 25: 6
+        line 26: 9
+
+  static void t1();
+    descriptor: ()V
+    flags: ACC_STATIC
+    Code:
+      stack=3, locals=2, args_size=0
+         0: iconst_0
+         1: istore_0
+         2: iconst_0
+         3: istore_1
+         4: iload_1
+         5: bipush        100
+         7: if_icmpgt     21
+        10: iload_0
+        11: iinc          0, 1
+        14: istore_0
+        15: iinc          1, 1
+        18: goto          4
+        21: getstatic     #5                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        24: new           #6                  // class java/lang/StringBuilder
+        27: dup
+        28: invokespecial #7                  // Method java/lang/StringBuilder."<init>":()V
+        31: iload_0
+        32: invokevirtual #8                  // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+        35: ldc           #9                  // String <--
+        37: invokevirtual #10                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        40: invokevirtual #11                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        43: invokevirtual #12                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        46: return
+      LineNumberTable:
+        line 29: 0
+        line 30: 2
+        line 31: 10
+        line 30: 15
+        line 33: 21
+        line 34: 46
+      StackMapTable: number_of_entries = 2
+        frame_type = 253 /* append */
+          offset_delta = 4
+          locals = [ int, int ]
+        frame_type = 250 /* chop */
+          offset_delta = 16
+
+  static void t4();
+    descriptor: ()V
+    flags: ACC_STATIC
+    Code:
+      stack=3, locals=2, args_size=0
+         0: iconst_0
+         1: istore_0
+         2: iconst_0
+         3: istore_1
+         4: iload_1
+         5: bipush        100
+         7: if_icmpgt     21
+        10: iinc          0, 1
+        13: iload_0
+        14: istore_0
+        15: iinc          1, 1
+        18: goto          4
+        21: getstatic     #5                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        24: new           #6                  // class java/lang/StringBuilder
+        27: dup
+        28: invokespecial #7                  // Method java/lang/StringBuilder."<init>":()V
+        31: iload_0
+        32: invokevirtual #8                  // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+        35: ldc           #9                  // String <--
+        37: invokevirtual #10                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        40: invokevirtual #11                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        43: invokevirtual #12                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        46: return
+      LineNumberTable:
+        line 37: 0
+        line 38: 2
+        line 39: 10
+        line 38: 15
+        line 41: 21
+        line 42: 46
+      StackMapTable: number_of_entries = 2
+        frame_type = 253 /* append */
+          offset_delta = 4
+          locals = [ int, int ]
+        frame_type = 250 /* chop */
+          offset_delta = 16
+
+  static void t2();
+    descriptor: ()V
+    flags: ACC_STATIC
+    Code:
+      stack=3, locals=2, args_size=0
+         0: iconst_0
+         1: istore_0
+         2: iconst_0
+         3: istore_1
+         4: iload_1
+         5: bipush        100
+         7: if_icmpgt     19
+        10: iinc          0, 1
+        13: iinc          1, 1
+        16: goto          4
+        19: getstatic     #5                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        22: new           #6                  // class java/lang/StringBuilder
+        25: dup
+        26: invokespecial #7                  // Method java/lang/StringBuilder."<init>":()V
+        29: iload_0
+        30: invokevirtual #8                  // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+        33: ldc           #9                  // String <--
+        35: invokevirtual #10                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        38: invokevirtual #11                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        41: invokevirtual #12                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        44: return
+      LineNumberTable:
+        line 45: 0
+        line 46: 2
+        line 47: 10
+        line 46: 13
+        line 49: 19
+        line 50: 44
+      StackMapTable: number_of_entries = 2
+        frame_type = 253 /* append */
+          offset_delta = 4
+          locals = [ int, int ]
+        frame_type = 250 /* chop */
+          offset_delta = 14
+
+  static void t3();
+    descriptor: ()V
+    flags: ACC_STATIC
+    Code:
+      stack=3, locals=2, args_size=0
+         0: iconst_0
+         1: istore_0
+         2: iconst_0
+         3: istore_1
+         4: iload_1
+         5: bipush        100
+         7: if_icmpgt     19
+        10: iinc          0, 1
+        13: iinc          1, 1
+        16: goto          4
+        19: getstatic     #5                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        22: new           #6                  // class java/lang/StringBuilder
+        25: dup
+        26: invokespecial #7                  // Method java/lang/StringBuilder."<init>":()V
+        29: iload_0
+        30: invokevirtual #8                  // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+        33: ldc           #9                  // String <--
+        35: invokevirtual #10                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        38: invokevirtual #11                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        41: invokevirtual #12                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        44: return
+      LineNumberTable:
+        line 53: 0
+        line 54: 2
+        line 55: 10
+        line 54: 13
+        line 57: 19
+        line 58: 44
+      StackMapTable: number_of_entries = 2
+        frame_type = 253 /* append */
+          offset_delta = 4
+          locals = [ int, int ]
+        frame_type = 250 /* chop */
+          offset_delta = 14
+}
+SourceFile: "CountAdd.java"

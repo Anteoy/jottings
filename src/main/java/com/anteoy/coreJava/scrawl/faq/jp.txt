@@ -1,0 +1,231 @@
+Classfile /home/zhoudazhuang/IdeaProjects/jottings/src/main/java/com/anteoy/coreJava/scrawl/faq/com/anteoy/coreJava/scrawl/faq/Oom.class
+  Last modified 2019-3-13; size 1087 bytes
+  MD5 checksum 5be2f89673362d9f6f4132839ee52f9f
+  Compiled from "Oom.java"
+public class com.anteoy.coreJava.scrawl.faq.Oom
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #15.#28        // java/lang/Object."<init>":()V
+   #2 = Class              #29            // java/util/ArrayList
+   #3 = Methodref          #2.#28         // java/util/ArrayList."<init>":()V
+   #4 = Integer            1048576
+   #5 = Class              #30            // java/lang/ref/SoftReference
+   #6 = Methodref          #5.#31         // java/lang/ref/SoftReference."<init>":(Ljava/lang/Object;)V
+   #7 = InterfaceMethodref #32.#33        // java/util/List.add:(Ljava/lang/Object;)Z
+   #8 = InterfaceMethodref #32.#34        // java/util/List.get:(I)Ljava/lang/Object;
+   #9 = Methodref          #5.#35         // java/lang/ref/SoftReference.get:()Ljava/lang/Object;
+  #10 = Class              #36            // "[B"
+  #11 = Fieldref           #37.#38        // java/lang/System.out:Ljava/io/PrintStream;
+  #12 = Methodref          #39.#40        // java/io/PrintStream.println:(Ljava/lang/Object;)V
+  #13 = Methodref          #14.#41        // com/anteoy/coreJava/scrawl/faq/Oom.StrongReference1:()V
+  #14 = Class              #42            // com/anteoy/coreJava/scrawl/faq/Oom
+  #15 = Class              #43            // java/lang/Object
+  #16 = Utf8               <init>
+  #17 = Utf8               ()V
+  #18 = Utf8               Code
+  #19 = Utf8               LineNumberTable
+  #20 = Utf8               StrongReference1
+  #21 = Utf8               StackMapTable
+  #22 = Class              #44            // java/util/List
+  #23 = Utf8               StrongReference2
+  #24 = Utf8               main
+  #25 = Utf8               ([Ljava/lang/String;)V
+  #26 = Utf8               SourceFile
+  #27 = Utf8               Oom.java
+  #28 = NameAndType        #16:#17        // "<init>":()V
+  #29 = Utf8               java/util/ArrayList
+  #30 = Utf8               java/lang/ref/SoftReference
+  #31 = NameAndType        #16:#45        // "<init>":(Ljava/lang/Object;)V
+  #32 = Class              #44            // java/util/List
+  #33 = NameAndType        #46:#47        // add:(Ljava/lang/Object;)Z
+  #34 = NameAndType        #48:#49        // get:(I)Ljava/lang/Object;
+  #35 = NameAndType        #48:#50        // get:()Ljava/lang/Object;
+  #36 = Utf8               [B
+  #37 = Class              #51            // java/lang/System
+  #38 = NameAndType        #52:#53        // out:Ljava/io/PrintStream;
+  #39 = Class              #54            // java/io/PrintStream
+  #40 = NameAndType        #55:#45        // println:(Ljava/lang/Object;)V
+  #41 = NameAndType        #20:#17        // StrongReference1:()V
+  #42 = Utf8               com/anteoy/coreJava/scrawl/faq/Oom
+  #43 = Utf8               java/lang/Object
+  #44 = Utf8               java/util/List
+  #45 = Utf8               (Ljava/lang/Object;)V
+  #46 = Utf8               add
+  #47 = Utf8               (Ljava/lang/Object;)Z
+  #48 = Utf8               get
+  #49 = Utf8               (I)Ljava/lang/Object;
+  #50 = Utf8               ()Ljava/lang/Object;
+  #51 = Utf8               java/lang/System
+  #52 = Utf8               out
+  #53 = Utf8               Ljava/io/PrintStream;
+  #54 = Utf8               java/io/PrintStream
+  #55 = Utf8               println
+{
+  public com.anteoy.coreJava.scrawl.faq.Oom();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 13: 0
+
+  static void StrongReference1();
+    descriptor: ()V
+    flags: ACC_STATIC
+    Code:
+      stack=3, locals=4, args_size=0
+         0: new           #2                  // class java/util/ArrayList
+         3: dup
+         4: invokespecial #3                  // Method java/util/ArrayList."<init>":()V
+         7: astore_0
+         8: aconst_null
+         9: astore_1
+        10: iconst_0
+        11: istore_2
+        12: iload_2
+        13: bipush        10
+        15: if_icmpge     46
+        18: ldc           #4                  // int 1048576
+        20: newarray       byte
+        22: astore_1
+        23: new           #5                  // class java/lang/ref/SoftReference
+        26: dup
+        27: aload_1
+        28: invokespecial #6                  // Method java/lang/ref/SoftReference."<init>":(Ljava/lang/Object;)V
+        31: astore_3
+        32: aload_0
+        33: aload_3
+        34: invokeinterface #7,  2            // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+        39: pop
+        40: iinc          2, 1
+        43: goto          12
+        46: iconst_0
+        47: istore_2
+        48: iload_2
+        49: bipush        10
+        51: if_icmpge     84
+        54: aload_0
+        55: iload_2
+        56: invokeinterface #8,  2            // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+        61: checkcast     #5                  // class java/lang/ref/SoftReference
+        64: invokevirtual #9                  // Method java/lang/ref/SoftReference.get:()Ljava/lang/Object;
+        67: checkcast     #10                 // class "[B"
+        70: astore_3
+        71: getstatic     #11                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        74: aload_3
+        75: invokevirtual #12                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+        78: iinc          2, 1
+        81: goto          48
+        84: return
+      LineNumberTable:
+        line 15: 0
+        line 16: 8
+        line 17: 10
+        line 18: 18
+        line 19: 23
+        line 20: 32
+        line 17: 40
+        line 22: 46
+        line 23: 54
+        line 24: 71
+        line 22: 78
+        line 26: 84
+      StackMapTable: number_of_entries = 4
+        frame_type = 254 /* append */
+          offset_delta = 12
+          locals = [ class java/util/List, class "[B", int ]
+        frame_type = 250 /* chop */
+          offset_delta = 33
+        frame_type = 252 /* append */
+          offset_delta = 1
+          locals = [ int ]
+        frame_type = 250 /* chop */
+          offset_delta = 35
+
+  static void StrongReference2();
+    descriptor: ()V
+    flags: ACC_STATIC
+    Code:
+      stack=3, locals=4, args_size=0
+         0: new           #2                  // class java/util/ArrayList
+         3: dup
+         4: invokespecial #3                  // Method java/util/ArrayList."<init>":()V
+         7: astore_0
+         8: iconst_0
+         9: istore_1
+        10: iload_1
+        11: bipush        10
+        13: if_icmpge     44
+        16: ldc           #4                  // int 1048576
+        18: newarray       byte
+        20: astore_2
+        21: new           #5                  // class java/lang/ref/SoftReference
+        24: dup
+        25: aload_2
+        26: invokespecial #6                  // Method java/lang/ref/SoftReference."<init>":(Ljava/lang/Object;)V
+        29: astore_3
+        30: aload_0
+        31: aload_3
+        32: invokeinterface #7,  2            // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+        37: pop
+        38: iinc          1, 1
+        41: goto          10
+        44: iconst_0
+        45: istore_1
+        46: iload_1
+        47: bipush        10
+        49: if_icmpge     82
+        52: aload_0
+        53: iload_1
+        54: invokeinterface #8,  2            // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+        59: checkcast     #5                  // class java/lang/ref/SoftReference
+        62: invokevirtual #9                  // Method java/lang/ref/SoftReference.get:()Ljava/lang/Object;
+        65: checkcast     #10                 // class "[B"
+        68: astore_2
+        69: getstatic     #11                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        72: aload_2
+        73: invokevirtual #12                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+        76: iinc          1, 1
+        79: goto          46
+        82: return
+      LineNumberTable:
+        line 29: 0
+        line 30: 8
+        line 31: 16
+        line 32: 21
+        line 33: 30
+        line 30: 38
+        line 35: 44
+        line 36: 52
+        line 37: 69
+        line 35: 76
+        line 39: 82
+      StackMapTable: number_of_entries = 4
+        frame_type = 253 /* append */
+          offset_delta = 10
+          locals = [ class java/util/List, int ]
+        frame_type = 250 /* chop */
+          offset_delta = 33
+        frame_type = 252 /* append */
+          offset_delta = 1
+          locals = [ int ]
+        frame_type = 250 /* chop */
+          offset_delta = 35
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #13                 // Method StrongReference1:()V
+         3: return
+      LineNumberTable:
+        line 42: 0
+        line 43: 3
+}
+SourceFile: "Oom.java"

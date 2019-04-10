@@ -7,7 +7,7 @@ package com.anteoy.coreJava.constant;
  * Description :
  */
 public class staticone {
-    static int a = 1;
+//    static int a = 1;
     String a = "---\n" +
             "id: 75\n" +
             "date: 2016-10-02 09:57:36\n" +

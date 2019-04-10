@@ -8,6 +8,6 @@ package com.anteoy.coreJava.constant;
  */
 public class statictwo {
     public static void main(String[] args) {
-        System.out.println(staticone.a);
+//        System.out.println(staticone.a);
     }
 }

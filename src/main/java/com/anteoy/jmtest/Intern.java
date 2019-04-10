@@ -42,11 +42,11 @@ public class Intern {
         String s5 = "Hello" + "World";
         String s6 = s3 + s4;
 
-        System.out.println(s1 == s2);
-        System.out.println(s1 == s5);
-        System.out.println(s1 == s6);
-        System.out.println(s1 == s6.intern());
-        System.out.println(s2 == s2.intern());
+        System.out.println(s1 == s2); //false
+        System.out.println(s1 == s5); //true
+        System.out.println(s1 == s6); //false
+        System.out.println(s1 == s6.intern()); //true
+        System.out.println(s2 == s2.intern()); //false
 
     }
 }

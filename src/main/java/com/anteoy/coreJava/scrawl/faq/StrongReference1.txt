@@ -1,0 +1,43 @@
+ 0 new #2 <java/util/ArrayList>
+ 3 dup //复制操作栈顶数值并将复制值压入栈顶
+ 4 invokespecial #3 <java/util/ArrayList.<init>>
+ 7 astore_0 //将操作栈栈顶引用型数值存入第一个局部变量
+ 8 aconst_null //将null推送至操作栈栈顶
+ 9 astore_1 //将操作栈栈顶引用型数值存入第二个局部变量 局部变量buff
+10 iconst_0 //将int型0推送至操作栈栈顶 int i = 0
+11 istore_2 //将操作栈栈顶int型数值存入第三个局部变量 也就是i
+12 iload_2 //将第三个int型局部变量i推送至操作栈栈顶
+13 bipush 10 //将单字节的常量值(-128~127)推送至操作栈栈顶 这里是把10推至栈顶
+15 if_icmpge 46 (+31) //比较操作栈栈顶两int型数值大小，当结果大于等于0时跳转
+18 ldc #4 <1048576> //将int, float或String型常量值从常量池中推送至操作栈栈顶 这里是1024*1024
+20 newarray 8 (byte) //创建一个指定原始类型（如int, float, char…）的数组，并将其引用值压入操作栈栈顶 new byte[]
+22 astore_1 //将操作栈栈顶引用型数值存入第二个局部变量buff
+23 new #5 <java/lang/ref/SoftReference>
+26 dup //复制操作栈顶数值并将复制值压入栈顶
+27 aload_1 //将第二个引用类型局部变量推送至操作栈栈顶buff
+28 invokespecial #6 <java/lang/ref/SoftReference.<init>> //调用实例构造器方法，私有方法和父类方法
+31 astore_3 //将操作栈栈顶引用型数值存入第四个局部变量i
+32 aload_0 //将第一个引用类型局部变量推送至操作栈栈顶list
+33 aload_3 //将第四个引用类型局部变量i推送至操作栈栈顶
+34 invokeinterface #7 <java/util/List.add> count 2 //调用接口方法
+39 pop //将操作栈栈顶数值i弹出 (数值不能是long或double类型的)
+40 iinc 2 by 1 //将指定int型变量增加指定值（i++, i–, i+=2）
+43 goto 12 (-31) //无条件跳转
+46 iconst_0 //将int型0推送至操作栈栈顶
+47 istore_2 //将操作栈栈顶int型数值存入第三个局部变量
+48 iload_2 //将第三个int型局部变量推送至操作栈栈顶
+49 bipush 10 //将单字节的常量值(-128~127)推送至操作栈栈顶
+51 if_icmpge 84 (+33) //比较操作栈栈顶两int型数值大小，当结果大于等于0时跳转
+54 aload_0 //将第一个引用类型局部变量推送至操作栈栈顶
+55 iload_2 //将第三个int型局部变量推送至操作栈栈顶
+56 invokeinterface #8 <java/util/List.get> count 2 //调用接口方法
+61 checkcast #5 <java/lang/ref/SoftReference> //检验类型转换，检验未通过将抛出ClassCastException
+64 invokevirtual #9 <java/lang/ref/SoftReference.get> //调用实例方法
+67 checkcast #10 <[B> //检验类型转换，检验未通过将抛出ClassCastException
+70 astore_3 //将操作栈栈顶引用型数值存入第四个局部变量
+71 getstatic #11 <java/lang/System.out> //获取指定类的静态域，并将其值压入操作栈栈顶
+74 aload_3 //将第四个引用类型局部变量推送至操作栈栈顶
+75 invokevirtual #12 <java/io/PrintStream.println> //调用实例方法
+78 iinc 2 by 1 //将指定int型变量增加指定值（i++, i–, i+=2）
+81 goto 48 (-33) //无条件跳转
+84 return

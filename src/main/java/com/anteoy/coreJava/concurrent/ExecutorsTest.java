@@ -19,6 +19,7 @@ public class ExecutorsTest {
         //可根据需要创建新线程的线程池，但是在以前构造的线程可用时将重用它们。
         ExecutorService pool = Executors.newCachedThreadPool();
         // 创建线程
+        Executors executors = null;
         Thread t1 = new MyThread();
         Thread t2 = new MyThread();
         Thread t3 = new MyThread();

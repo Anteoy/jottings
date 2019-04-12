@@ -6,14 +6,14 @@ import java.util.BitSet;
  * @auther zhoudazhuang
  * @date 19-2-13 16:28
  * @description 一个序列里除了一个元素，其他元素都会重复2次或者3次，设计一个时间复杂度与空间复杂度最低的算法，找出不重复的元素。
- * 注意我们这里的解决方案用2个bit来表示这个数和其出现的次数 只有00 10 01 11这四种情况 故只能统计出现了0次，1次，2次，3次的情况
+ * 注意我们这里的解决方案用2个bit来表示这个数和其出现的次数 只有00 10 01 11这四种情况 故只能统计出现了(00)0次，(10)1次，(01)2次，(11)3次的情况 从左到右约定
  */
 public class BitMapTest {
     public static void main(String[] args) {
-        int[] list = {1,2,2,4,4,4,4};
+        int[] list = {0,1,2,2,4,4,4,4};
         int len = list.length * 2;
         BitSet bs = new BitSet(len);
-
+        System.out.println(bs.size());
         for (int i = 0; i < list.length; i++) {
             // 把原始数据扩大两倍进行处理 后面再缩放回来 目地是用2个bit来表达这个数的出现次数和这个数本身
             // 如果不乘以2 则若是这种1,2这种数字进来 就会把第二个位置被2占了 不能用2个bit表达来实现了，乘2之后就是2,4 留出了n+1的位置
@@ -31,6 +31,7 @@ public class BitMapTest {
             else if (!b1 && b2) { //检测到第一个位置为false 但第二个位置为true 说明是上面改变的重复2次的处理方式 这里把n和n+1的位置都置为true 也就是11 表示检测到第三个重复的数了
                 bs.set(n, n + 1, true);
             }else if (b1 && b2){
+                System.out.println("存在出现次数三个以上的数: " + list[i]);
                 //已经存在3个重复数的情况会进入此逻辑 但这里已经是 00表示没有这个数 10表示这个数的次数为1 01表示这个数的次数为2次 11表示这个数的次数为3次
                 //所以这种2个bit的表达方式不能判断3次以及以上的了
             }

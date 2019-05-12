@@ -16,10 +16,12 @@ public class ProducerConsumerInJava {
         System.out.println("Solving Producer Consumper Problem");
         Queue<Integer> buffer = new LinkedList<>();
         int maxSize = 10;
-        Thread producer = new Producer(buffer, maxSize, "PRODUCER");
-        Thread consumer = new Consumer(buffer, maxSize, "CONSUMER");
-        producer.start();
-        consumer.start();
+        for (int i = 0;i < 1; i++) {
+            Thread producer = new Producer(buffer, maxSize, "PRODUCER");
+            Thread consumer = new Consumer(buffer, maxSize, "CONSUMER");
+            producer.start();
+            consumer.start();
+        }
     }
 }
 
@@ -33,7 +35,13 @@ class Producer extends Thread
     {
         while (true)
         {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             synchronized (queue) {
+                System.out.println("producer获取到锁");
                 while (queue.size() == maxSize) {
                     try {
                         System.out.println("Queue is full, " + "Producer thread waiting for " + "consumer to take something from queue");
@@ -45,6 +53,7 @@ class Producer extends Thread
                 int i = random.nextInt();
                 System.out.println("Producing value : " + i); queue.add(i);
                 queue.notifyAll();
+
             }
         }
     }
@@ -62,6 +71,7 @@ class Consumer extends Thread {
     @Override public void run() {
         while (true) {
             synchronized (queue) {
+                System.out.println("consumer获取到锁");
                 while (queue.isEmpty()) {
                     System.out.println("Queue is empty," + "Consumer thread is waiting" + " for producer thread to put something in queue");
                     try {
